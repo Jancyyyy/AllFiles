@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {            
+            color: maroon;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outDiv"></div><br /><br />
+    <button id="btnAdd">Add Post!</button>
+    <script>
+        // Service - something reusable can be provided to many people
+        // Service to be available for all over the interenet - Web Service
+        // Web Service - SOAP - Simple Object Access protocol though communication for 
+        // web services happens over http protocol only.
+        // because of SOAP message in http req and in http response things are little bit slower
+        // to overcome this problem, what we have got is 
+        // RESTFul Service - Representation State Transfer
+        // RESFTFul Service doens't use SOAP, it use 
+        // simple http verbs like HTTP GET, PUT, POST, DELETE etc.
+        // For Security purpose RESTFul Services make use Token-based Authentication , OAuth - Open Authorization
+
+        function showArr(arr) {
+            var out = "";
+            for (var i in arr) {
+                out += '<br/>' + arr[i].userId + " " + arr[i].id+ " " + arr[i].title;
+            }
+            document.getElementById('outDiv').innerHTML = out;
+        }
+
+        function loadDoc() {
+            var url = "http://jsonplaceholder.typicode.com/posts";
+            var xhttp = new XMLHttpRequest(); // AJAX
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState === 4 && xhttp.status === 200) {                   
+                    // Parse JSON string to Javascript Object
+                    var jsonArr = JSON.parse(xhttp.responseText);
+                    showArr(jsonArr);
+                }
+            }
+            xhttp.open('GET', url, true);
+            xhttp.send();
+        }      
+
+        // As and when document is ready call loadDoc method.
+        document.onreadystatechange = loadDoc;
+
+        document.getElementById('btnAdd').onclick = function(){
+            var url = "http://jsonplaceholder.typicode.com/posts";
+            var xhttp = new XMLHttpRequest(); // AJAX
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState === 4 && xhttp.status === 201) {       
+                    console.log(xhttp.response);
+                }
+            }
+            xhttp.open('POST', url, true);
+            xhttp.setRequestHeader('Content-Type','application/json;charset=UTF-8');
+            xhttp.send(JSON.stringify({
+                userId:1,
+                title:'My Title!',
+                body:'Some Description about My Title!'
+            }));
+        }
+    </script>
+</body>
+
+</html>

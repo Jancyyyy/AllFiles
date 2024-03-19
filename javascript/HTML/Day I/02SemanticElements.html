@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Semantic - more meaning -->
+    <progress value="40" max="100">40</progress>
+    <br />
+    <p>This is something <mark>important!</mark></p>
+    <br />
+    <p>Your test score is 92
+        <meter value="92" min="0" max="100" low="40" high="90" optimum="95"></meter>
+    </p>
+    <p>Your test score is 50
+        <meter value="50" min="0" max="100" low="40" high="90" optimum="95"></meter>
+    </p>
+    <p>Your test score is 39
+        <meter value="30" min="0" max="100" low="40" high="90" optimum="95"></meter>
+    </p>
+    <br />
+    <p>Your temp is 92
+        <meter value="92" min="0" max="100" low="40" high="90" optimum="35"></meter>
+    </p>
+    <p>Your temp is 50
+        <meter value="50" min="0" max="100" low="40" high="90" optimum="35"></meter>
+    </p>
+    <p>Your temp is 39
+        <meter value="30" min="0" max="100" low="40" high="90" optimum="35"></meter>
+    </p>
+
+    <br />
+    <form id="multForm"
+    oninput="op.value = (val1.valueAsNumber || 1)*(val2.valueAsNumber || 1)">
+        <input type="number" name="val1" />
+        <input type="number" name="val2" />
+        <output name="op" for="val1 val2"></output>
+    </form>
+    <time datetime="14:00">2pm</time>
+</body>
+
+</html>

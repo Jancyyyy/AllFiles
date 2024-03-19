@@ -1,0 +1,12 @@
+
+.first{
+    color:green;
+}
+.second{
+    @extend .first;
+    background-color: yellow;
+}
+.first{
+    background-color:pink;
+  
+  }

@@ -1,0 +1,125 @@
+
+
+	Node
+
+	design pattern
+	framework
+	platform / runtime
+
+	
+	Execute java code within the browser?
+		plugin - applet
+	Execute C# / VB.net within the browser?
+		plugin - silverlight
+
+
+	Execute javascript code within the browser
+
+				-	Runtime / Platform
+	JAVA	on the machine	JVM - Java Virtual Machine
+	C#	on the machine	CLR - Common Language Runtime
+	C, C++  on the machine	C Runtime 
+
+	Javascript	on the machine		node.exe
+
+	download the node conceptually 3 things
+	
+	node.exe - runtime
+	node.js - SDK/ JDK / FCL
+	npm  - Node Package Manager
+
+
+	npm to install / uninstall packages
+	
+	yarn
+	bower - to manage only client side packages
+		e.g.  node-sass, Angular
+
+			
+
+	Architecture Pattern
+
+	n-tier / n-layer arch pattern
+
+	3-tier
+
+	PL	BL	DAL
+
+			queries to access the data
+			class
+				methods
+			unit testing
+	
+			ORM - Object Relational Mapping
+
+			you code against object that has a mapping with table of RDBMS
+		
+		Java - ORM - Hibernate
+		C#, VB.net - ORM - Entity Framework
+		Javascript / Node - No SQL - MongoDB - ODM - Mongoose
+
+		What about unit testing of BL
+			libraries, .dll, .lib set of classes
+			easily do the unit testing
+
+		PL - you don't do unit testing of Presentation
+
+		UI + UI Logic
+
+		What about independent unit testing of UI Logic
+		ans NO - button click handler needs to have button object
+		- so you need to go mocking
+	
+
+	Separation of Concern
+	TDD - Test Driven Development	
+
+	MVC - Model View Controller
+
+	Model - Data Entity
+	View - Representation of that Data
+	Controller - first class citizen - push model's data to the view
+		and also handles events associated with controls which are
+		there on the view.
+
+	Client Server Arch - Web App / Web Site - MVC
+
+	
+	MVP - Model View Presenter - Thick Client
+
+		View has a ref to Presenter and vice versa
+	MVPM - Model View Presenter Model
+	works almost same like MVC
+
+	
+	Microsoft has adopted MVPM and come up with another pattern called as
+	
+	MVVM - Model View ViewModel
+
+	Wherever you have support for 
+		Data Binding & 
+		Commands you go for MVVM
+	Object that invoke the command and object that execute the command
+
+	Prism,WPF, Silverlight
+
+
+		MVC - Arch Pattern
+		MVC is being implemented
+		Java	- Spring
+		.Net	- Asp.net MVC
+		Node	- Express
+
+	
+	Node - Single threaded, fast, scalable, Event Driven Programming.
+
+	Module Formats
+
+	Node - CommonJS
+	
+	export - module.exports
+	import - require() - CommonJS require function
+
+
+
+

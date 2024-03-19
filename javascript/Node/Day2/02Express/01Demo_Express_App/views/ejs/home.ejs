@@ -1,0 +1,19 @@
+<doctype html>
+    <html>
+        <head>
+            <title>Using Embedded Javascrpt View Engine!</title>
+        </head>
+        <body>
+            <header><%- include('header'); -%></header>
+            <article>
+                <% myHeader = 'My Article Header!' %>
+                <header><%- include('header'); -%></header>
+            </article>
+            <section>
+                <% myHeader = 'My Section Header!' %>
+                <header><%- include('header'); -%></header>
+            </section>
+            <h1>Hello from EJS!</h1>
+        </body>
+    </html>
+</doctype>

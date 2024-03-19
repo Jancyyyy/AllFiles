@@ -1,0 +1,130 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="a1" href="https://www.google.co.in">Google</a>
+    <script>
+        function $(id){
+            return document.getElementById(id);
+        }
+        $('a1').onclick = function(evt){
+            evt.preventDefault(); // prevents the default behaviour
+            alert('Google!');
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCKTYPE html>
+    <html>
+
+    <head>
+        <title></title>
+        <meta content="text/html; charset=utf-8" />
+        <style>
+            #div1,
+            #div2 {
+                width: 400px;
+                height: 100px;
+                background-color: turquoise;
+                color: indigo;
+                text-align: center;
+                padding: 5px;
+                margin: 10px;
+                border: solid 4px maroon;
+                font-size: x-large;
+            }
+
+            #div3 {
+                width: 400px;
+                height: 100px;
+                background-color: orange;
+                color: navy;
+                text-align: center;
+                padding: 5px;
+                margin: 10px;
+                border: solid 4px maroon;
+                font-size: x-large;
+            }
+
+            #div4,
+            #div5 {
+                width: 400px;
+                height: 100px;
+                background-color: indigo;
+                color: turquoise;
+                text-align: center;
+                padding: 5px;
+                margin: 10px;
+                border: solid 4px maroon;
+                font-size: x-large;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id='div1'>
+            <p id='para1'>This is bubbling!</p>
+        </div>
+        <div id='div2'>
+            <p id='para2'>This is bubbling-withstopPropogation!</p>
+        </div>
+        <div id='div3'>
+            <p id='para3'>This is capturing-withstopPropogation!</p>
+        </div>
+        <div id='div4'>
+            <p id='para4'>This is para with multiple Listeners!</p>
+        </div>
+        <div id='div5'>
+            <p id='para5'>This is para with multiple Listeners and with stopImmediatePropogation!</p>
+        </div>
+        <script>
+            function $(id) {
+                return document.getElementById(id);
+            }
+            $('div1').addEventListener('click', function () {
+                alert('You Clicked div1!');
+            }, false);// by default false - bubbling
+            $('para1').addEventListener('click', function () {
+                alert('You Clicked para1!');
+            }, false);
+            $('div2').addEventListener('click', function () {
+                alert('You Clicked div2!');
+            }, false);
+            $('para2').addEventListener('click', function (evt) {
+                alert('You Clicked para2!');
+                evt.stopPropagation(); // Stop the event propagation in the hierarchy
+            }, false);
+            $('div3').addEventListener('click', function (evt) {
+                alert('You Clicked div3!');
+                evt.stopPropagation(); // Stop the event propagation in the hierarchy
+            }, true);
+            $('para3').addEventListener('click', function (evt) {
+                alert('You Clicked para3!');
+            }, true);
+            $('para4').addEventListener('click', function () {
+                alert('You Clicked para4 through first listener!');
+            }, false);
+            $('para4').addEventListener('click', function () {
+                alert('You Clicked para4 through second listener!');
+            }, false);
+            $('div5').addEventListener('click', function () {
+                alert('You Clicked div5!');
+            }, false);
+            $('para5').addEventListener('click', function (evt) {
+                alert('You Clicked para5 through first listener!');
+                // evt.stopPropagation();// Stop the event propagation in the hierarchy
+                evt.stopImmediatePropagation(); // Stop the event propagation at same level as well as in the hierarchy               
+            }, false);
+            $('para5').addEventListener('click', function () {
+                alert('You Clicked para5 through second listener!');
+            }, false);
+        </script>
+    </body>
+
+    </html>

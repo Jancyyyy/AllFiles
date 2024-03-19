@@ -1,0 +1,6 @@
+React:js library for building user interfaces
+every react has atleast one component which is:root
+
+
+
+Jest: developed by fb

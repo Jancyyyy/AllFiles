@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-size: xx-large;
+            color:maroon;
+        }
+    </style>
+</head>
+
+<body>
+    <p><b>Status </b> <span id="A1"></span></p>
+    <p><b>Status Text </b> <span id="A2"></span></p>
+    <p><b>Response </b> <span id="A3"></span></p>
+    <br /><br />
+    <button onclick="loadDoc('03myjson.txt')">Change Content!</button>
+    <script>    
+        function showArr(arr){
+            var out ="";
+            for(var i in arr){
+                out +='<br/>'+arr[i].name+" from "+arr[i].country;
+            }
+            document.getElementById('A3').innerHTML = out;
+        }
+
+        function loadDoc(url) {
+            var xhttp = new XMLHttpRequest(); // AJAX
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState === 4 && xhttp.status === 200) {
+                    document.getElementById('A1').innerHTML
+                        = xhttp.status;
+                    document.getElementById('A2').innerHTML
+                        = xhttp.statusText;
+                    // Parse JSON string to Javascript Object
+                    var jsonArr = JSON.parse(xhttp.responseText);
+                    showArr(jsonArr);
+                }
+            }
+            xhttp.open('GET', url, true);
+            xhttp.send();
+        }
+        /*
+                JSON - Javascript Object Notation
+                
+                JSON and XML
+                Similarities
+                    Both are self describing
+                    Both are hierarchical
+                    Both can be fetched with an XMLHttpRequest
+
+                Differences
+                    JSON doesn't need to have end tag
+                    JSON much shorter
+                    JSON can use arrays
+                    XML has to be parsed by xml parser
+
+                    JSON can be parsed by standard javascript functions like
+
+                    JSON.parse - Parse JSON String to Javascript Object.
+                    JSON.stringify - Convert Javascript Object to JSON String.
+        */
+    </script>
+</body>
+
+</html>

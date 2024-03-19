@@ -1,0 +1,2 @@
+This is some simple file,
+This can be read by using file system core node module.

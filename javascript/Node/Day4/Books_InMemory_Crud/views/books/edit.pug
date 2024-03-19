@@ -1,0 +1,28 @@
+extend ../layout
+
+block pagecontent
+    ul.list-group 
+        li.list-group-item 
+            a(href="/books") Back to Books
+
+    .row 
+        .col-sm-offset-3.col-sm-6
+            form(method="post")
+                legend.text-center Edit Book Information
+                .form-group 
+                    label(for="bisbn") Book Isbn 
+                    input#bid.form-control(type="text", placeholder="Enter Book Isbn", name="bisbn", value=book.isbn)
+                .form-group 
+                    label(for="bname") Book Name 
+                    input#bname.form-control(type="text", placeholder="Enter Book Name", name="bname", value=book.name)
+                .form-group 
+                    label(for="bauthor") Book Author
+                    input#bname.form-control(type="text", placeholder="Enter Book Author", name="bauthor", value=book.author)
+                .form-group 
+                    label(for="bpages") Book Pages
+                    input#bname.form-control(type="text", placeholder="Enter Number of Pages", name="bpages", value=book.pages)
+                .row 
+                    .col-sm-6 
+                        button.btn.btn-block.btn-primary(type="submit") Submit
+                    .col-sm-6 
+                        button.btn.btn-block.btn-default(type="reset") Reset

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #element{
+            text-align:center;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+
+            transition-property: all;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 2s;
+        }
+        #element:hover{
+            height: 300px;
+            width: 300px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="element">Transition!</div>
+</body>
+</html>

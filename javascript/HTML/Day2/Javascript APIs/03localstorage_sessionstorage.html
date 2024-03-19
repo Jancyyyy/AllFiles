@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form1">
+        <p>
+            You have viewed this page <span id="counter"></span> times.
+        </p><br /><br /><br /><br /><br /><br />
+        <p>
+            In Current Session: You have viewed this page <span id="scounter"></span> times.
+        </p>
+    </form>
+    <script>
+        function setCounter() {
+            if (!localStorage.getItem('noOfPageLoads')) {
+                localStorage.setItem('noOfPageLoads', 0);
+            }
+            localStorage.setItem('noOfPageLoads',
+                parseInt(localStorage.getItem('noOfPageLoads')) + 1);
+            document.getElementById('counter').innerHTML
+                = localStorage.getItem('noOfPageLoads');
+
+            if (!sessionStorage.getItem('noOfPageLoadsPerSession')) {
+                sessionStorage.setItem('noOfPageLoadsPerSession', 0);
+            }
+            sessionStorage.setItem('noOfPageLoadsPerSession',
+            parseInt(sessionStorage.getItem('noOfPageLoadsPerSession')) + 1);
+            document.getElementById('scounter').innerHTML
+                = sessionStorage.getItem('noOfPageLoadsPerSession');
+        }
+        window.onload = setCounter;
+    </script>
+</body>
+
+</html>

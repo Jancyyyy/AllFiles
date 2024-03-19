@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes slidein {
+            from{
+                margin-left: 100%;
+            }
+            to{
+                margin-left: 0%;
+            }
+        }
+        h1{
+            animation-name: slidein;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: gray;
+        }
+        @keyframes resize {
+            from{
+                height: 0px;
+                background-color: blue;
+            }
+            to{
+                height: 300px;
+                background-color: red;
+            }
+        }
+
+        #div1{
+            animation: resize 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes multicolor {
+          0%{background-color: red;}
+          25%{background-color: green;}
+          50%{background-color: blue;}
+          75%{background-color: orange;}
+          10%{background-color: yellow;}
+        }
+        .divClass{
+            animation-name: multicolor;
+            animation-duration: 5s;
+        }
+    </style>
+</head>
+<body>
+    <!-- @keyframes = animation -->
+    <!-- <h1>Animation!</h1>
+    <div id="div1"></div> -->
+
+    <button id="btnAnimate">Animate!</button><br/><br/>
+    <div id="div2"></div>
+
+    <script>
+        document.getElementById('btnAnimate').onclick =function(){
+            document.getElementById('div2').className = 'divClass';
+        }
+    </script>
+   
+</body>
+</html>

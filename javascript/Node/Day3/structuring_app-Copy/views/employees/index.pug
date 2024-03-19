@@ -1,0 +1,34 @@
+extend ../layout
+
+block pagecontent 
+  ul.list-group 
+    li.list-group-item 
+      a(href="/") Home
+    li.list-group-item 
+      a(href="/employees/create") Create Book
+
+    table.table.table-striped
+        thead 
+            tr 
+                th Id 
+                th Name 
+                th Isbn
+                th Author
+                th Pages
+                th 
+                th 
+                th
+        tbody 
+            each book in empList
+                tr
+                    td=book.id 
+                    td=book.name
+                    td=book.isbn 
+                    td=book.author
+                    td=book.pages 
+                    td 
+                        a.text-info(href="/employees/details/"+book.id) Details
+                    td 
+                        a.text-warning(href="/employees/edit/"+book.id) Edit
+                    td 
+                        a.text-danger(href="/employees/delete/"+book.id) Delete

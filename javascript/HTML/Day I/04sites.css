@@ -1,0 +1,13 @@
+form{
+    width:70%;
+    margin:auto;
+}
+
+legend{
+    background-color: peachpuff;
+    font-size: x-large;
+}
+
+.star{
+    color:red
+}

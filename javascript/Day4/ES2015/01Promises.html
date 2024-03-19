@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // callback mechanism
+        // Callback Hell - Callback Hell is essentially nested callback stacked below one another
+        // forming a pyramid structure. Every callback depends/ waits for the previous callback, thereby
+        // making a pyramid structure that affects the readability and maintanibility of the code.
+
+        // Promise - The promise object represents the eventual completion or failure of an asynchronous operation
+        // and its resulting value.
+
+        // A promise is in one these states
+        // pending: initial state, neither fulfilled not rejected.
+        // fulfilled: meaning that the operation was completed successfully.
+        // rejected: meaning that the operation failed.
+
+        /*let promise1 = Promise.resolve('I am a resolved promise!');
+        promise1.then((result)=>console.log(result));*/
+
+        /*let promise1 = new Promise(function(resolve,reject){
+            setTimeout(()=>resolve(44),2000);
+        })
+
+        promise1.then((result)=>{
+            result += 22;
+            console.log(result);
+        })*/
+
+        /*let promise1 = new Promise(function(resolve,reject){
+            setTimeout(()=>reject('Timed out!'),2000);
+        })
+
+        promise1.then((result)=>{            
+            console.log(result);
+        }).catch((err)=>{
+            console.error(err);
+        })*/
+
+        /*// Promise.all()
+        let promise1 = new Promise(function (resolve, reject) {
+            resolve("I am Promise 1");
+        })
+        let promise2 = new Promise(function (resolve, reject) {
+            resolve("I am Promise 2");
+        })
+        let promise3 = new Promise(function (resolve, reject) {
+            //resolve("I am Promise 3");
+            reject('I am rejected Promise 3');
+        })
+        let promise4 = new Promise(function (resolve, reject) {
+            resolve("I am Promise 4");
+        })
+
+        // The Promise.all() method takes an iterable of promises as input 
+        // and returns a single Promise. This returned promise fulfills 
+        // when all of the input's promises fulfill (including when an empty 
+        // iterable is passed), with an array of the fulfillment values. 
+        // It rejects when any of the input's promises rejects, with this 
+        // first rejection reason.
+
+
+
+        
+
+        let promise5 = Promise.all([promise1,promise2,promise3,promise4]);
+
+        promise5.then((result)=>{
+            console.log(Array.isArray(result));
+            console.log(result[0])
+            console.log(result[1])
+            console.log(result[2])
+            console.log(result[3])
+        }).catch((err)=>{
+            console.error(err);
+        }) */
+
+        /*// Promise.any()
+        //let promise1 = Promise.reject(0);
+        //let promise2 = new Promise((resolve,reject)=>{
+        //    setTimeout(resolve,100,'promise 2');
+       //})
+        //let promise3 = new Promise((resolve,reject)=>{
+        //    setTimeout(resolve,500,'promise 3');
+        //})
+
+        let promise1 = Promise.reject('Error 1 Message!');
+        let promise2 = new Promise((resolve,reject)=>{
+            setTimeout(reject,100,'Error 2 Message!');
+        })
+        let promise3 = new Promise((resolve,reject)=>{
+            setTimeout(reject,500,'Error 3 Message!');
+        })
+
+        let promises = [promise1,promise2,promise3];
+
+        //The Promise.any() method takes an iterable of promises as input and 
+        //returns a single Promise. This returned promise fulfills when any 
+        //of the input's promises fulfills, with this first fulfillment value.
+        // It rejects when all of the input's promises reject (including when 
+        //an empty iterable is passed), with an AggregateError containing an 
+        //array of rejection reasons.
+
+        Promise.any(promises)
+        .then((value) =>{
+            console.log(value)
+        }).catch((err)=>{
+            console.error(err.name+' '+err.message);
+            for(let e of err.errors){
+                console.error(e);
+            }
+        })*/
+
+        // Promise.race()
+
+        let promise1 = new Promise(function (resolve, reject) {
+            //resolve("I am Promise 1");
+            //reject('Error 1 Message!');
+            setTimeout(resolve,500,'I am Promise 1');
+        })
+        let promise2 = new Promise(function (resolve, reject) {
+            resolve("I am Promise 2");
+            //reject('Error 2 Message!');
+        })
+        let promise3 = new Promise(function (resolve, reject) {
+            resolve("I am Promise 3");
+        })
+        let promise4 = new Promise(function (resolve, reject) {
+            resolve("I am Promise 4");
+        })
+
+        //The Promise.race() method takes an iterable of promises as input and
+        //returns a single Promise. This returned promise settles with the 
+        //eventual state of the first promise that settles.
+
+        // Promise.race() accepts an array of promises as an argument and returns 
+        // a single promise as an output. The single promise it returns is the 
+        // fastest promise to finish running—resolved or not. This means 
+        // Promise.race() will return the promise with the shortest execution 
+        // time in an array of promises.
+
+        let promise5 = Promise.race([promise1,promise2,promise3,promise4]);
+
+        promise5.then((result)=>{
+            console.log(result);
+        }).catch((err)=>{
+            console.error(err);
+        })
+    </script>
+</body>
+</html>
+<!-- 
+
+Async keyword is used along with the function declaration which specifies that this function is now able to accept all types of asynchronous events on itself.
+In other words, the async keyword is used along with functions (or methods) which enables them to receive all types of asynchronous data easily.
+Async keyword usage along with the functions always returns a promise at the end along with its state (pending or resolved or rejected).
+Await is used inside the async function which is though useful for the waiting purpose of the result.
+Await basically waits for the results which are particularly to be fetched from the source from which that async function is about to fetch the data.
+Await takes a little time to fetch the results from the source (like API) and thereafter along with the async function returns the result in the form of a promise.
+Await can also be used if Async is used along with the function declaration. -->

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin:5px;
+        }
+        div.static{
+            position: static;
+            border: 3px solid maroon;
+        }
+        div.relative{
+            position: relative;
+            border: 3px solid maroon;
+            width:400px;
+            height: 200px;
+            left:30px;
+        }
+        div.absolute{
+            position:absolute;
+            border: 3px solid maroon;
+            width:300px;
+            right:10px;
+        }
+        div.fixed{
+            position:fixed;
+            border: 3px solid maroon;
+            width:300px;
+            right:10px;
+        }
+        div.inherit{
+            position:inherit;
+            border: 3px solid maroon;
+            width:300px;
+            left:50px;
+            top:100px;
+        }
+        div.sticky{
+            position:sticky;
+            border: 3px solid maroon;
+            background-color: aqua;
+            padding:5px;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="static">
+        This div element has default position - static.
+    </div>
+    <div class="relative">
+        This div element has position - relative.
+        relative position element is positioned relative to it's
+        normal position.
+
+        <div class="absolute">
+            This div element has position - absolute.
+            absolute position element is positioned relative to it's
+            first ancester node.
+        </div>
+
+        <div class="fixed">
+            This div element has position - fixed.
+            fixed position element is positioned relative to browser's window.
+        </div>
+        <div class="inherit">
+            This div element has position - inherit.
+           inherit as that of parent.
+        </div>
+    </div>
+    <br/><br/>
+    <div class="sticky">
+        This div element has postion: sticky.
+    </div>
+    <div style="padding-bottom:2000px;">
+        <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll
+            position.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et
+            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae
+            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et
+            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae
+            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    </div>
+    <!-- 
+        positions - 
+        static
+        relative
+        absolute
+        fixed
+        sticky
+        inherit
+     -->
+</body>
+</html>

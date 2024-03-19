@@ -1,0 +1,80 @@
+div{
+    background-color:  peachpuff;
+}
+
+#list1{
+    font-style: italic;
+    font-size: x-large;
+}
+
+.a{
+    color:red;
+}
+
+.b{
+    color:green;
+}
+
+/*Selectors */
+/*Every div precede by p*/
+/* p ~ div{
+    background-color: palegreen;
+    height: 100px;
+} */
+
+/* all those p those are placed immediately after div */
+/* div + p{
+    background-color: gray;
+} */
+
+/* all div and p */
+/* div, p {
+    background-color: orange;
+} */
+
+/* Pseudo class - is used to define a special state of an element */
+
+p:first-of-type{
+    background-color: yellow;
+}
+p:last-of-type{
+    background-color: red;
+}
+
+div:hover{
+    background-color: purple;
+}
+
+a:link{color:red;}
+a:hover{color:green;}
+a:active{color:blue;}
+
+/* Pseudo Element - is used to style specified part of the element.*/
+
+p::first-letter{
+    font-size: 70px;
+    float:left;
+}
+
+p::first-line{
+    color:red;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+h1::before{
+    content:url('./images/smiley.jpg');
+}
+
+h1::after{
+    content:url('./images/smiley.jpg');
+}
+
+::selection{
+    color:yellow;
+    background-color: green;
+}
+
+h1{
+    text-shadow: 3px 3px 5px blue;
+}

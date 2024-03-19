@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        /*Internal Style*/
+        span{
+            color:indigo;
+            background-color: aqua;
+            font-size: xx-large;
+        } 
+    </style> -->
+    <link rel="stylesheet" href="./05mystyles.css"/>
+    <script src="./05mymaths.js"></script>
+</head>
+<body>
+    <!-- 
+        POPUPs
+        alert - message box
+        prompt - asking user to enter some value - input
+        confirm - confirming - ok or cancel
+     -->
+     <!-- <b>Addition is <span id="spanAdd" style="color:peachpuff;background-color:maroon;font-size:xx-large;"></span></b><br/>
+     <b>Multiplication is <span id="spanMult" style="color:peachpuff;background-color:maroon;font-size:xx-large;"></span></b>
+      -->
+      <b>Addition is <span id="spanAdd"></span></b><br/>
+      <b>Multiplication is <span id="spanMult"></span></b>
+     <script>
+        var no1 = parseInt(prompt('Please Enter number 1!',10));// parsing
+        var no2 = Number(prompt('Please Enter number 2!',20));// conversion
+
+        var result = add(no1,no2);
+        document.getElementById('spanAdd').innerHTML = result;
+        result = mult(no1,no2);
+        document.getElementById('spanMult').innerHTML = result;
+
+        // confirm
+        if(confirm('Do you want to format your HDD?')){
+            alert('You are very brave!');
+        }
+        else{
+            alert('A wise decision!');
+        }
+     </script>
+</body>
+</html>

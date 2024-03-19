@@ -1,0 +1,388 @@
+updatePanelAvailability.test.js
+
+const Panelavailability = require("../models/panels_availabilities");
+const panel = require("../models/Panel");
+const panelstatus = require("../models/panels_availability_status");
+let chai = require('chai');
+let chaiHttp = require('chai-http');
+let server = require('../app');
+let should = chai.should();
+chai.use(chaiHttp);
+// var server = require('connect').createServer();
+
+describe("/POST updatePanel",()=>{
+    it('It should POST a valid user',(done)=>{
+        let panel={
+            user_id: "VV75156",
+            name: "Vaishnavi",
+            grade: "d2",
+            fromtime: "5:30" ,
+            totime: "6:30",
+            status: "PanelNoShow",
+            date: "2023-02-03",
+        }
+        chai.request(server)
+            .post('/updatePanel')
+            .set('content-type','application/json')
+            .send(panel)
+            .end((err,res)=>{
+                if(err){
+                    console.log(err)
+                    done()
+                }
+                res.should.have.status(200);
+                res.body.should.have.property('msg').eql('successfully updated');
+                 
+            done();
+        })
+    });
+    it('It should not POST as user id is invalid',(done)=>{
+        let panel={
+            user_id: "VV98756",
+            name: "Vaishnavi",
+            grade: "d2",
+            fromtime: "4:30" ,
+            totime: "5:30",
+            status: "PanelNoShow",
+            date: "2023-02-03",
+        }
+        chai.request(server)
+            .post('/updatePanel')
+            .set('content-type','application/json')
+            .send(panel)
+            .end((err,res)=>{
+                if(err){
+                    console.log(err)
+                    done()
+                }
+                res.should.have.status(500);
+
+            // res.body.should.have.property('message').eql('Successfully Added User Details');
+            // res.body.userObject.should.have.property('user_id');
+            done();
+        })
+    });
+    it('It should not POST as user id is missing',(done)=>{
+        let panel={
+           
+            name: "Vaishnavi",
+            grade: "d2",
+            fromtime: "4:30" ,
+            totime: "5:30",
+            status: "PanelNoShow",
+            date: "2023-02-03",
+        }
+        chai.request(server)
+            .post('/updatePanel')
+            .set('content-type','application/json')
+            .send(panel)
+            .end((err,res)=>{
+                if(err){
+                    console.log(err)
+                    done()
+                }
+                res.should.have.status(500);
+
+            // res.body.should.have.property('message').eql('Successfully Added User Details');
+            // res.body.userObject.should.have.property('user_id');
+            done();
+        })
+    });
+    it('It should not POST as name is missing',(done)=>{
+        let panel={
+            user_id: "VV98756",
+            grade: "d2",
+            fromtime: "4:30" ,
+            totime: "5:30",
+            status: "PanelNoShow",
+            date: "2023-02-03",
+        }
+        chai.request(server)
+            .post('/updatePanel')
+            .set('content-type','application/json')
+            .send(panel)
+            .end((err,res)=>{
+                if(err){
+                    console.log(err)
+                    done()
+                }
+                res.should.have.status(500);
+
+            // res.body.should.have.property('message').eql('Successfully Added User Details');
+            // res.body.userObject.should.have.property('user_id');
+            done();
+        })
+    });
+    it('It should not POST as grade is missing',(done)=>{
+        let panel={
+            user_id: "VV98756",
+            name: "Vaishnavi",
+            fromtime: "4:30" ,
+            totime: "5:30",
+            status: "PanelNoShow",
+            date: "2023-02-03",
+        }
+        chai.request(server)
+            .post('/updatePanel')
+            .set('content-type','application/json')
+            .send(panel)
+            .end((err,res)=>{
+                if(err){
+                    console.log(err)
+                    done()
+                }
+                res.should.have.status(500);
+
+            // res.body.should.have.property('message').eql('Successfully Added User Details');
+            // res.body.userObject.should.have.property('user_id');
+            done();
+        })
+    });
+    it('It should not POST as from time is missing',(done)=>{
+        let panel={
+            user_id: "VV98756",
+            name: "Vaishnavi",
+            grade: "d2",
+            totime: "5:30",
+            status: "PanelNoShow",
+            date: "2023-02-03",
+        }
+        chai.request(server)
+            .post('/updatePanel')
+            .set('content-type','application/json')
+            .send(panel)
+            .end((err,res)=>{
+                if(err){
+                    console.log(err)
+                    done()
+                }
+                res.should.have.status(500);
+
+            // res.body.should.have.property('message').eql('Successfully Added User Details');
+            // res.body.userObject.should.have.property('user_id');
+            done();
+        })
+    });
+    it('It should not POST as to time is missing',(done)=>{
+        let panel={
+           
+            user_id: "VV98756",
+            name: "Vaishnavi",
+            grade: "d2",
+            fromtime: "4:30" ,
+          
+            status: "PanelNoShow",
+            date: "2023-02-03",
+        }
+        chai.request(server)
+            .post('/updatePanel')
+            .set('content-type','application/json')
+            .send(panel)
+            .end((err,res)=>{
+                if(err){
+                    console.log(err)
+                    done()
+                }
+                res.should.have.status(500);
+
+            // res.body.should.have.property('message').eql('Successfully Added User Details');
+            // res.body.userObject.should.have.property('user_id');
+            done();
+        })
+    });
+    it('It should not POST as status is missing',(done)=>{
+        let panel={
+            user_id: "VV75156",
+            name: "Vaishnavi",
+            grade: "d2",
+            fromtime: "5:30" ,
+            totime: "6:30",
+          
+            date: "2023-02-03",
+        }
+        chai.request(server)
+            .post('/updatePanel')
+            .set('content-type','application/json')
+            .send(panel)
+            .end((err,res)=>{
+                if(err){
+                    console.log(err)
+                    done()
+                }
+                res.should.have.status(500);
+
+            // res.body.should.have.property('message').eql('Successfully Added User Details');
+            // res.body.userObject.should.have.property('user_id');
+            done();
+        })
+    });  
+    it('It should not POST as status is missing',(done)=>{
+        let panel={
+            user_id: "VV75156",
+            name: "Vaishnavi",
+            grade: "d2",
+            fromtime: "5:30" ,
+            totime: "6:30",
+            status:"",
+            date: "2023-02-03",
+        }
+        chai.request(server)
+            .post('/updatePanel')
+            .set('content-type','application/json')
+            .send(panel)
+            .end((err,res)=>{
+                if(err){
+                    console.log(err)
+                    done()
+                }
+                res.should.have.status(500);
+
+            // res.body.should.have.property('message').eql('Successfully Added User Details');
+            // res.body.userObject.should.have.property('user_id');
+            done();
+        })
+    });  
+})
+----------------------------------------------------------------------------
+updatePanel.js
+
+
+const Panelavailability = require("../../models/panels_availabilities");
+const panel = require("../../models/Panel");
+const panelstatus = require("../../models/panels_availability_status");
+
+async function updatePanel(req, res, next) {
+    console.log("req.body");
+    console.log(req.body);
+        // console.log("try");
+    console.log(req.body.fromtime);
+    const p = req.body.status;
+    console.log("p");
+    console.log(p);
+    var pid = "";
+    try{
+    panel.findOne({ user_id: req.body.user_id }, (err, result) => {
+        console.log(1);
+        console.log(result)
+        if (err) {
+            res.status(500).send({ error: err });
+            return;
+        }
+        if( result==null)
+        {
+            // throw new Error('yo failed')
+
+            res.status(500).send({ error: err });
+            return;
+            
+        }
+        console.log("This is result")
+        console.log(result)
+       
+        pid = result.id;
+  
+        Panelavailability.findOne({ panel_id: pid }, (err, result) => {
+            console.log(2);
+            if (err) {
+                res.send({ error: err });
+                return;
+            }
+            // console.log(result);
+            Panelavailability.findOneAndUpdate(
+                { panel_id: pid },
+                { $set: { start_time: req.body.fromtime, end_time: req.body.totime } },
+                (err, result) => {
+                    console.log(3);
+                    if (err) {
+                        res.send({ error: err });
+                        return;
+                    }
+
+                    panelstatus.findOne(
+                        { availability_status: req.body.status },
+                        (err, result) => {
+                            console.log(444)
+
+                            if (err || result==null) {
+                                res.status(500).send({ error: err });
+                                return;
+                            }
+                            console.log(result);
+                            const status_id = result.availability_status_id;
+                            console.log(status_id)
+                            console.log(pid)
+
+                            Panelavailability.findOneAndUpdate({ panel_id: pid },
+                                { $set: { availability_status_id: status_id } },
+                                (err, result) => {
+                                    console.log(4)
+                                    if (err) {
+                                        res.send({ error: err, msg: "while updating panel avail" });
+                                        return;
+                                    }
+                                    result.save((err, resultt) => {
+                                        if (err) {
+                                            res.send({ error: err, msg: "while updating panel avail" });
+                                        }
+                                        console.log(resultt)
+                                        // result.availability_status_id = status_id;
+                                        // result.save();
+                                        // console.log(result)
+                                        res.send({ msg: "successfully updated", data: resultt });
+
+                                    });
+
+
+                                }
+                            );
+                        }
+                    );
+                });
+        });
+
+       
+    });
+}catch(err)
+{
+    console.log("err")
+    res.status(500).send({ error: err });
+}
+
+}
+module.exports = { updatePanel };
+
+
+//---------------------------------------------------------------
+import { render, screen, cleanup } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";;
+import UpdatePanelAvailability from "./updatePanel";
+import { BrowserRouter as Router } from 'react-router-dom';
+jest.mock('./updatePanel');
+
+afterEach(cleanup);
+describe("Update Component", () => {
+  test("submit the form when button is clicked!", () => {
+    render( <Router><UpdatePanelAvailability /></Router>);
+
+    const buttonElement = screen.getByRole("button");
+    userEvent.click(buttonElement);
+
+    const outputElement = screen.getByText("Update");
+    expect(outputElement).toBeInTheDocument();
+  });
+
+  test("render Number input", () => {
+    render( <Router><UpdatePanelAvailability /></Router>);
+
+    const inputEl = screen.getByTestId("name-id");
+    expect(inputEl).toBeInTheDocument();
+    expect(inputEl).toHaveAttribute("type", "text");
+  });
+
+  test("render Number input", () => {
+    render( <Router><UpdatePanelAvailability /></Router>);
+    const inputE2 = screen.getByTestId("associate-id");
+    expect(inputE2).toBeInTheDocument();
+    expect(inputE2).toHaveAttribute("type", "text");
+  });
+});

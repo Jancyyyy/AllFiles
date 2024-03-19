@@ -1,0 +1,22 @@
+@primary-color:orange;
+@width:0.6;
+
+h1{
+    width: percentage(@width); // return 60%
+    color:saturate(@primary-color,5%);
+    background-color: green;
+}
+
+@bColor:red;
+
+div{
+    height: 50px;
+    width: 50px;
+    background-color: @bColor;
+    margin:10px;
+
+    // & refering to the parent selector
+    &:hover{
+        background-color: fadeout(@bColor,50%);
+    }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ECMAScript - Standards / Specifications on which javascript is being
+        // implemented
+        // ES 5 js - vanilla js - all the browsers do support it
+        // ES 2015 - new standards - modern browser do support it
+        // ES 2017, ES 2018 ...... ES Next
+
+        // Datatypes and variables
+
+        var a = 5; // Number
+        var b = 6.7; // Number
+        var ch = 'A'; // String
+        var str = "abcd"; // String
+        var bool = true; // boolean
+        var x; // undefinedZ/
+
+        // array
+        var cars = ['Audi', 'Nano', 'BMW']; // Array Literal syntax
+
+        // object
+        var obj = { firstName: 'Sachin', lastName: 'Tendulkar' };
+
+        document.write('<br/> type of a ' + typeof (a))
+        document.write('<br/> type of b ' + typeof b)
+        a = 'Abhijeet'
+        document.write('<br/> type of a ' + typeof (a))
+        a = 4 + 5 + 'abcd'
+        document.write('<br/> type of a ' + typeof (a) + ' a ' + a)
+        a = 'abcd' + 4 + 5
+        document.write('<br/> type of a ' + typeof (a) + ' a ' + a)
+
+        // Variable Naming Convention
+        // Variables and Functions are in camelCase
+        // Global variables written in UPPERCASE
+        // constants (like PI) writter in UPPERCASE
+        // camelCase and Underscore are in variables
+        // $ - in variable names
+
+        // Rules
+        // variable names contains letters, digits, underscore and $
+        // generally it begins with letter but also with _ or $
+        // case sensitive
+        // should not use any javascript keyword - new, try etc
+
+        // operators
+        var z = 11;
+        //if(z == '11'){ // == compares only values and not datatypes
+        if (z === '11') { // == compares values and datatypes both
+            alert('Equal!');
+        }
+        else {
+            alert('Not Equal!');
+        }
+
+        // for, while, do while
+        // for loop
+        console.log('Using for loop!');
+        for (var i = 0; i < cars.length; i++) {
+            console.log(cars[i]);
+        }
+
+        // for in loop - ES5
+        console.log('Using ES5 for in loop!');
+        for (var i in cars) {
+            console.log(cars[i]); // i is still a loop counter -iterates over enumerable string properties of obj
+        }
+
+        // for of loop - ES2015
+        console.log('Using ES2015 for of loop!');
+        for (let car of cars) {
+            console.log(car); // car is an individual element-iterates over values that iterable obj defines to
+                              // be iterated over.
+        }
+    </script>
+</body>
+
+</html>

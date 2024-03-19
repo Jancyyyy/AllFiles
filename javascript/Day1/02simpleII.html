@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function foo() {
+            document.getElementById("para1").innerText = "Hello Universe!";
+        }
+        function bar() {//describes the loading state of document
+            if (document.readyState == "complete") {
+                alert("document.readyState " + this.readyState);
+                //document.getElementById("para1").innerText = "<h1>Hello Galaxy!</h1>";
+                document.getElementById("para1").innerHTML = "<h1>Hello Galaxy!</h1>";
+
+            }
+            // readyStates-describes the loading state of document
+            // uninitialized
+            // loading
+            // loaded
+            // interactive
+            // complete
+        }
+        // event called as load
+        window.onload = foo; // event listener
+        //onload occurs when an object has been loaded.
+        // event called readystatechange
+        document.onreadystatechange = bar;
+
+    </script>
+</head>
+<body>
+    <p id="para1" style="color:red;">Hello World!</p>
+    
+</body>
+
+</html>

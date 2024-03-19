@@ -1,0 +1,19 @@
+<doctype html>
+    <html>
+        <head>
+            <title><%- title %></title>
+        </head>
+        <body>
+            <h1>Favourite Recipes</h1>
+            <ul style="list-style:none; padding:10px;">
+                <% recipes.forEach(function(recipe){ %>
+                    <li>
+                        <%- recipe.Id %>
+                        <a style="font-size:x-large;" href="<%- recipe.url %>">
+                            <%- recipe.name %>
+                        </a>
+                    </li>
+                <% }) %>
+            </ul>
+        </body>
+    </html>

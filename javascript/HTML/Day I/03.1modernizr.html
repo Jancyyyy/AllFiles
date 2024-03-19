@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./scripts/modernizr-custom-1.js"></script>
+</head>
+
+<body>
+    <script>
+        if (Modernizr.canvas) {
+            alert('Canvas is supported!');
+        }
+        if (Modernizr.audio) {
+            alert('Audio is supported!');
+        }
+        if (Modernizr.video) {
+            alert('Video is supported!');
+        }
+        if (Modernizr.inputtypes.time) {
+            alert('Inputtypes.time is supported!');
+        } else {
+            alert('Inputtypes.time is not supported!');
+        }
+        if (Modernizr.inputtypes.month) {
+            alert('Inputtypes.month is supported!');
+        } else {
+            alert('Inputtypes.month is not supported!');
+        }
+        if (Modernizr.datetime) {
+            alert('datetime is supported!');
+        } else {
+            alert('datetime is not supported!');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+extend ../layout
+
+block pagecontent 
+    ul.list-group 
+        li.list-group-item
+            a(href="/employees") Back to Books
+
+    .row 
+        h2.tex-info= book.id
+        h2.tex-info= book.name
+        h2.tex-info= book.isbn
+        h2.tex-info= book.author
+        h2.tex-info= book.pages

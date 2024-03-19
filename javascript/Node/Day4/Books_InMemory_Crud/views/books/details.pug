@@ -1,0 +1,12 @@
+extend ../layout
+
+block pagecontent 
+    ul.list-group 
+        li.list-group-item
+            a(href="/books") Back to Books
+
+    .row 
+        h2.text-info= book.isbn
+        h2.text-info= book.name
+        h2.text-info=book.author
+        h2.text-info=book.pages

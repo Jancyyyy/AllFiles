@@ -1,0 +1,26 @@
+$width:200px;
+
+.container {
+    width: $width;
+    border:3px solid maroon;
+    margin:30px;
+    text-align: center;
+}
+
+.container-half {
+    border:3px solid navy;
+    width: $width / 2;
+    margin:30px;
+    text-align: center;
+}
+
+$custom-green: palegreen;
+
+a {
+    color:navy;
+    background-color:$custom-green;
+  }
+  
+  a:hover {
+    background-color: darken($custom-green,40%);
+  }

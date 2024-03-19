@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js"></script>  
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        // React Component
+        var Hello = React.createClass({
+            render:function(){
+                return React.createElement('h1',{'id':'hOne'},'Hello World - using ES5!');
+            }
+        })  
+        // Render the Component on the virtual DOM
+        ReactDOM.render(
+            React.createElement(Hello),
+            document.getElementById('container'));
+    </script>
+</body>
+</html>

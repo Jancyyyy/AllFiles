@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./index.js"></script>
+    <title>BURGER!</title>
+</head>
+<body>
+    <style>
+        body {
+          background-image: url("bur.jpg");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+          padding-left: 350px;
+        }
+        h1{
+            color: rgb(144, 8, 255);
+            font-size: 100px;
+        }
+        button{
+            background-color: rgb(255, 0, 170);
+        }
+        div{
+            position:absolute; 
+            top:600px;
+            padding-left:200px;
+
+        }
+        </style>
+    <h1> Burger O'clock</h1>
+    <div>
+    <input type="text" id="mobileNumber" placeholder="Enter Mobile Number" pattern="[7-9]{1}[0-9]{9}" minlength="10" maxlength="10" required>
+<!--     <input type="text" id="mobileNumber" placeholder="Enter your 10 digit mobile number" />-->
+<!--     <button id="btn" onclick="validate()">Enter</button>-->    
+    <button type="submit" onclick="validate()" class="btn btn-primary">Enter</button>
+    </div>
+    <script>
+        function validate()
+        {
+            window.location.href="./menu.html";
+        }
+    </script>
+</body>
+</html>

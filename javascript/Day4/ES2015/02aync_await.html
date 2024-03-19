@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // async - function should get executed asynchronously
+        // await - it should wait till the get response
+        // await keyword can be used only with async method
+
+        /*async function main(){
+            let result = 0;
+            result = await test();
+            console.log(result);
+        }
+        function test(){
+            return new Promise(resolve =>{
+                setTimeout(()=>{
+                    resolve('Successful!');
+                },5000);
+            })
+        }
+        main();*/
+
+        function haveCustomer() {
+            return new Promise(resolve => { resolve('have Cursomer!') });
+        }
+
+        function getOrder(customer) {
+            return new Promise(resolve => { resolve('get Order!') });
+        }
+
+        function prepareFood(order) {
+            return new Promise((resolve, reject) => {
+                resolve('prepare Food!');
+                //reject("Can't prepare Food!");
+            })
+        }
+
+        function serveFood(meal) {
+            return new Promise(resolve => { resolve('serve Food!') });
+        }
+
+        function eatFood(food) {
+            return new Promise(resolve => { resolve('eat Food!') });
+        }
+
+        function showError(err) {
+            console.error(err);
+        }
+
+        /*function restaurantCustomer(){
+            return haveCustomer()
+            .then(customer =>{
+                console.log(customer);
+                return getOrder(customer);
+            }).then(order =>{
+                console.log(order);
+                return prepareFood(order);
+            }).then(meal =>{
+                console.log(meal);
+                return serveFood(meal);
+            }).then(food =>{
+                console.log(food);
+                return eatFood(food);
+            }).catch(showError);
+        }
+        restaurantCustomer().then(result=>{console.log(result)});*/
+
+        async function restaurantCustomer() {
+            try {
+                let customer = await haveCustomer();
+                console.log(customer);
+                let order = await getOrder(customer);
+                console.log(order);
+                let meal = await prepareFood(order);
+                console.log(meal);
+                let food = await serveFood(meal);
+                console.log(food);
+                return await eatFood(food);
+
+            } catch (e) {
+                showError('Error ' + e);
+            }
+        }
+
+        (async () => {
+            let result = await restaurantCustomer();
+            console.log(result);
+        })();
+
+    </script>
+</body>
+</html>

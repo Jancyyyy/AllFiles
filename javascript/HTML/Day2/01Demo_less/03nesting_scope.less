@@ -1,0 +1,35 @@
+// // nesting_scopeI.css
+// ul{
+//     background-color: indigo;
+//     padding: 10px;
+//     list-style: none;
+
+//     li{
+//         background-color: aqua;
+//         border-radius: 3px;
+//         margin:10px 0;
+//     }
+// }
+
+// nesting - scope
+// nesting_scopeII.css
+
+@my-color: red;
+
+ul {
+    @my-color: black;
+    background-color: indigo;
+    padding: 10px;
+    list-style: none;
+
+    li {
+        color: @my-color;
+        background-color: aqua;
+        border-radius: 3px;
+        margin: 10px 0;
+    }
+}
+
+h1 {
+    background-color: @my-color;
+}

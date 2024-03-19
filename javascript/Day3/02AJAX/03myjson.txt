@@ -1,0 +1,5 @@
+[
+    {"name":"Sachin","country":"India"},
+    {"name":"Brian","country":"West Indies"},
+    {"name":"Sanath","country":"Sri Lanka"}
+]

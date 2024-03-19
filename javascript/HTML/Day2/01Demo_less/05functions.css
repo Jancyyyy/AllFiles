@@ -1,0 +1,14 @@
+h1 {
+  width: 60%;
+  color: #ffa500;
+  background-color: green;
+}
+div {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  margin: 10px;
+}
+div:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+}

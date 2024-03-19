@@ -1,0 +1,149 @@
+//PUT is used to send data to a server to create/update a resource.
+//GET - When you get some data from URL Like name, address, gender etc. 
+//GET methods is only use for retrive data from URL.
+//Post - When you send some data on server then use post methods.
+//Mocha is a js testing framework that provides functions that are executed according in a specific order,
+//Mocha allows asynchronous testing, test coverage reports, and use of any assertion library. 
+
+paginator.js
+
+import React, {useEffect, useState} from "react";
+
+const renderData = (data) => {
+  return(
+    <ul>
+    {data.map((todo,index)=>{
+      return <li key={index}>{todo.index}</li>
+    })
+    }
+    </ul>
+  );
+};
+function Paginator(){
+  const [data,setData]=useState([]);
+  
+  const [currentPage, setcurrentPage]=useState(1);
+  const [itemsPerPage, setitemsPerPage]=useState(3);
+
+  const [PageNumberLimit, setPageNumberLimit]=useState(1);
+  const [maxPageNumberLimit, setmaxPageNumberLimit]=useState(1);
+  const [minPageNumberLimit, setminPageNumberLimit]=useState(1);
+
+  const handleClick=(event)=>{
+    setcurrentPage(Number(event.target.id));
+  }
+  
+const pages=[];
+for(let i=1;i<=Math.ceil(data.length/itemsPerPage);i++){
+    pages.push(i);
+}
+const indexOfLastItem =currentPage*itemsPerPage;
+const indexOfFirstItem=indexOfLastItem - itemsPerPage;
+const currentItems= data.slice(indexOfFirstItem,indexOfLastItem);
+
+const renderPageNumbers=pages.map(number=>{
+  if(number < maxPageNumberLimit+1 && number > minPageNumberLimit ){
+  return(
+      <li key={number} 
+      id={number} 
+      onClick={handleClick}>
+        className={currentPage == number ? "active" : null}
+        {number}
+      </li>
+    );
+  }else{
+    return null;
+    
+  }
+})
+
+  useEffect(()=>{
+    fetch("http://localhost:3001/panelList")
+      .then((response) =>response.json())
+      .then((json) =>console.log(json));
+  }, []);
+
+  const handleNextbtn=()=>{
+    setcurrentPage(currentPage + 1);
+
+    if(currentPage+1> maxPageNumberLimit){
+      setmaxPageNumberLimit(maxPageNumberLimit + PageNumberLimit)
+      setminPageNumberLimit(minPageNumberLimit + PageNumberLimit)
+    }
+  };
+
+  const handlePrevbtn=()=>{
+    setcurrentPage(currentPage - 1);
+
+    if((currentPage-1)% PageNumberLimit == 0){
+      setmaxPageNumberLimit(maxPageNumberLimit - PageNumberLimit)
+      setminPageNumberLimit(minPageNumberLimit - PageNumberLimit)
+    }
+  };
+
+
+  let pageIncrementBtn=null;
+  if(pages.length > maxPageNumberLimit){
+    pageIncrementBtn= <li onClick={handleNextbtn}> %&^hellip; </li>
+  }
+
+  let pageDecrementBtn=null;
+  if(pages.length > maxPageNumberLimit){
+    pageDecrementBtn= <li onClick={handlePrevbtn}> %&^hellip; </li>
+  }
+
+
+return(
+  <>
+  <ul classNAme="PageNumbers">{renderPageNumbers}</ul>
+  {renderData(currentItems)}
+  <ul className="pageNumbers">
+    <li>
+      <button>Prev</button>
+    </li>
+    {renderPageNumbers}
+    <li>
+      <button
+      onClick={handleNextbtn}
+      >Next</button>
+    </li>
+  </ul>
+  </>
+)
+}
+export default Paginator;
+----------------------------------------------------------------------------
+paginator.css
+
+.PageNumbers{
+  list-style: none;
+  display:flex;
+}
+.PageNumbers li{
+  padding:10px;
+  border: 1px solid white;
+  cursor: pointer;
+
+}
+.PageNumbers li.active{
+  background-color: white;
+  color:black;
+}
+.PageNumbers li button{
+  background-color: transparent;
+  border:none;
+  color: white;
+  font-size: 1.5rem;
+  cursor:pointer;
+
+}
+.PageNumbers li button:hover{
+  background-color: white;
+  color: black;
+}
+.PageNumbers li button:focus{
+  outline: none;
+}
+
+
+

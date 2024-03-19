@@ -1,0 +1,11 @@
+"use strict";
+var dataArr1;
+dataArr1 = [1, 'Abhijeet'];
+dataArr1 = ['Abhijeet', 1];
+dataArr1 = ['Abhijeet', 'Gole'];
+dataArr1 = [1, 2, 3, 4, 5, 6];
+dataArr1 = [1, 'Abhijeet', 234, 'Pune'];
+var dataRow;
+dataRow = [100, 'default'];
+var user;
+user = [1, 'Sachin', true, 200, 'Mumbai'];

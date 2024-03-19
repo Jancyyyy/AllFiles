@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+        table,th,tr,td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        #myTable{
+            border: 1px solid black;
+            width: 60%;
+            margin: auto;
+        }
+        .place-order{
+            background-color: black;
+            color: rgb(250, 240, 240);
+            height: 60px;
+            width: 100px;
+            text-align: center;
+        }
+        .table-header{
+            border: none;
+            align-content: center;
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+       body{
+        background-color:lightblue;
+       }
+    </style>
+</head>
+
+<body>
+    <table id="myTable">
+      <tr>
+        <th colspan="6" class="table-header">My Cart Details
+        </th>
+      </tr>   
+        
+        <tr>
+            <th>Burger Type</th>
+            <th>Burger Category</th>
+            <th>Price</th>
+            <th>Quantity </th>
+            <th>Total Price</th>
+            <th>Remove</th>
+        </tr>
+    </table>
+
+    <p id="final-text">
+
+    </p>
+    <footer>
+    <button class="place-order">Place Order</button>
+    </footer>
+    <script>
+        var arrStored = JSON.parse(localStorage["arr"]);
+        console.log(arrStored)
+        function addTable() {
+            var table = document.getElementById("myTable");
+            let price;
+            let count = 0,totalPrice=0
+            arrStored.map(e => {
+                var row = table.insertRow();
+                var cell = row.insertCell();
+                cell.innerHTML = e.name;
+                cell = row.insertCell();
+                cell.innerHTML = e.category;
+                if(e.category === "veg"){
+                    price = 100
+                }
+                else if(e.category === "Egg"){
+                    price = 150
+                }
+                else{
+                    price = 200
+                }
+                cell = row.insertCell();
+                cell.innerHTML = price;
+
+                cell = row.insertCell();
+                cell.innerHTML = e.quantity;
+                cell = row.insertCell();
+                var totalPriceCalculate = parseInt(price) * parseInt(e.quantity)
+                cell.innerHTML = totalPriceCalculate;
+                cell = row.insertCell();
+                cell.innerHTML = "remove";
+                count++;
+                totalPrice+=totalPriceCalculate
+            })
+            var ele = document.getElementById("final-text")
+            ele.innerHTML = `Total Quantity <strong>${count}</strong>  & Total Price Rs. <strong>${totalPrice}/</strong>`
+        }
+        addTable();
+    </script>
+</body>
+</html>

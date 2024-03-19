@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Attributes!</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./04sites.css" />
+</head>
+
+<body>
+    <form name="form1" method="post" action="https://www.yahoo.com">
+        <fieldset>
+            <legend>User Details</legend>
+            <p>
+                <label for="fname">First Name
+                    <span class="star">*</span>
+                </label>
+                <input type="text" name="fname" id="fname" required
+                placeholder="Please Enter First Name!"
+                autocomplete="off"/>
+            </p>
+            <p>
+                <label for="lname">Last Name
+                    <span class="star">*</span>
+                </label>
+                <input type="text" name="lname" id="lname" />
+            </p>
+            <p>
+                <label for="email">
+                    Email
+                </label>
+                <input type="email" name="email" id="email" required/>
+            </p>
+            <p>
+                <label for="password">Password
+                    <input type="password" name="password" 
+                    id="password" 
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}"
+                    />
+                    <Label>Use 6-20 characters, at least 1 uppercase letter and 1 number.</Label>
+                </label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <p>
+                <label for="bday">Birthday
+                </label>
+                <input type="date" name="bday" id="bday">
+            </p>
+            <fieldset>
+                <legend>Gender</legend>
+                <input type="radio" name='Gender' value="male" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name='Gender' value="female" id="female">
+                <label for="female">Female</label>
+            </fieldset>
+        </fieldset>
+        <fieldset>
+            <legend>Address Details</legend>
+            <p>
+            <fieldset>
+                <legend>Phone</legend>
+                <span class="hidden">Area Code</span>
+                </label>
+                <input type="text" name="areacode" id="areacode">
+                <br />
+                <label for="threedigits">
+                    <span class="hidden">Three Digits</span>
+                </label>
+                <input type="text" name="threedigits" 
+                id="threedigits" maxlength="3">
+                <br />
+                <label for="fourdigits" class="inline">
+                    <span class="hidden">Four Digits</span>
+                </label>
+                <input type="text" name="fourdigits" 
+                id="fourdigits" maxlength="4">
+            </fieldset>
+            </p>
+            <p>
+                <label for="location">
+                    Location
+                </label>
+                <input type="text" list="location" />
+                <datalist id="location">
+                    <option value="Pune" />
+                    <option value="Mumbai" />
+                    <option value="Delhi" />
+                    <option value="Hyderabad" />
+                    <option value="Kolkata" />
+                </datalist>
+            </p>
+            <p>
+                <label for="zip">Zip Code
+                </label>
+                <input type="text" name="Zip" maxlength="6"
+                pattern="\d{6}"/>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Terms of Services</legend>
+            <p>
+                <input type="checkbox" name="tos" id="tos">
+                <label for="tos">
+                    I agree to terms of service.</label>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" name="submit" id="submit" 
+            value="Submit">
+            <input type="submit" name="submit" id="submitII" 
+            value="SubmitII"
+            formnovalidate
+            formmethod="get"
+            formaction="http://www.google.com">
+            <input type="reset" value="Cancel">
+            <button type="button">Simple Button!</button>
+        </p>
+        <!-- <label for="dbColor" id="lblColor">Color: </label>
+        <input type="color" name="dbColor" id="dbColor" 
+        onchange="getElementById('lblColor').style.backgroundColor
+        = getElementById('dbColor').value"/> -->
+    </form>
+</body>
+
+</html>

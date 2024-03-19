@@ -1,0 +1,32 @@
+extend ../layout
+
+block pagecontent 
+  ul.list-group 
+    li.list-group-item 
+      a(href="/") Home
+    li.list-group-item 
+      a(href="/books/create") Create Book
+
+    table.table.table-striped
+        thead 
+            tr 
+                th Isbn
+                th Name 
+                th Author
+                th Pages 
+                th 
+                th
+                th
+        tbody 
+            each boo in booList
+                tr
+                    td=boo.isbn
+                    td=boo.name
+                    td=boo.author 
+                    td=boo.pages
+                    td 
+                        a.text-info(href="/books/details/"+boo.isbn) Details
+                    td 
+                        a.text-warning(href="/books/edit/"+boo.isbn) Edit
+                    td 
+                        a.text-danger(href="/books/delete/"+boo.isbn) Delete

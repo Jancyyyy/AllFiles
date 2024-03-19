@@ -1,0 +1,1780 @@
+M-MongoDB-Database
+ :MongoDB is a document-oriented database(is a database that stores information in documents))
+  It is open source software.
+  MongoDB has collections and documents.
+  A document is a record in MongoDB collection.
+  A collection is a set of MongoDB documents
+   BSON is a binary-encoded format, whereas JSON is a text-based format. 
+  This means that BSON is compact for transmitting over a network, while JSON is human-
+  readable and easier to work with in various contexts.
+ :MongoDB is an open-source document-oriented database that is designed to store 
+ a large scale of data and also allows you to work with that data very 
+ efficiently. It is categorized under the NoSQL (Not only SQL) database because 
+ the storage and retrieval of data in the MongoDB are not in the form of tables.
+ it makes it easy for developers to store, manage, and retrieve data when
+ creating applications with most programming languages.
+ Express adds more features while building apps. Node is just a Javascript environment
+ with libraries to make it easy to write software, whereas Express extends Node 
+specifically to add middleware, routing, and much more.
+
+-NOSQL OR MONGODB
+ The key difference between NoSQL and MongoDB is that NoSQL is a mechanism 
+ to store and retrieve data in a non-relational database and MongoDB is a 
+ document-oriented database which belongs to NoSQL.
+ 
+How data is represented in MongoDB?
+ The data stored in the MongoDB is in the format of BSON documents. Here, 
+ BSON stands for Binary representation of JSON documents. Or in other words, 
+ in the backend, the MongoDB server converts the JSON data into a binary form that 
+ is known as BSON and this BSON is stored and queried more efficiently.
+
+E-ExpressJS-Backend
+ :Express is a node js web application framework that provides broad features
+ for building web and mobile applications. 
+ Express.js is a small framework that works on top of Node.js web server 
+ functionality to simplify its APIs and add helpful new features.
+ It makes it easier to organize your application’s functionality with middleware and routing. 
+ It adds helpful utilities to Node.js HTTP objects and facilitates the rendering
+ of dynamic HTTP objects.
+ It is used to build a single page, multipage, and hybrid web application.
+
+R-ReactJS-Frontend
+ :it is a front-end js library developed by fb in 2011.
+ it is used to developing complex and interactive web and mobile UI.
+ it is js library for building user interfaces or UI components.
+ it is widely used for creating single-page applications.
+
+N-NodeJS-Backend/Frontend
+ :Node.js is a runtime environment that allows you to run JavaScript on the 
+ server side. It uses the V8 JavaScript engine from Google Chrome and provides 
+ a non-blocking, event-driven architecture. Node.js is commonly used for 
+ building scalable network applications, handling asynchronous tasks, 
+ and creating real-time applications like chat applications or streaming 
+ services.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/202410:21 AM 1/8/2024Dec 6th:Javascript
+ 
+1.What is ECMAScript?
+-It provides specifications for javascript,it basically is standard of 
+javascript that guides a path to js
+ 
+2.object.defineproperty()  and   Object.defineproperties()?
+-It is useed to define or modify the property of an object
+ 
+object.defineproperty() it has 3 parameters
+object- nmae of the obj 
+prop-the name or symbol of the property
+descriptor-It has the value and data that has to be defined or modified
+ 
+let obj a={};
+ 
+object.defineproperty(obj,{prop1:
+value:560;
+writable:true
+configurable:true;
+})
+ 
+ 
+console.log(obj.prop1)
+ 
+3.for in loop and for of loop
+ 
+for(key in object )
+ 
+it returns a key value that allows us to access to the value of the key element
+ 
+for(variable of iterable)
+ 
+returns a list of values of the numeric properties of the object being iterated.
+ 
+eg:
+let list = [4, 5, 6];
+ 
+for (let i in list) {
+   console.log(i); // "0", "1", "2",
+}
+ 
+for (let i of list) {
+   console.log(i); // "4", "5", "6"
+}
+ 
+ 
+ 
+ 
+prototype:
+We can access methods and
+The JavaScript prototype property allows you to add new properties to object constructors:
+ 
+eg:
+function Person(first, last, age, eyecolor) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eyecolor;
+}
+ 
+Person.prototype.nationality = "English";
+ 
+DIFFERENCES
+ 
+proto & prototype:
+ 
+Both of them are used to share the benaviour and data from multiple objects.
+-prototype is used to access the prototype of a function using function.
+-It is a property of the class
+Eg:Syntax: (function.prototype)
+ 
+-proto is used to access the prototype of a function using the object
+-It is the property of the instance of that class.
+-It is also called dunder proto.
+Eg:Syntax: (object.__proto__)
+ 
+ 
+Encapsulation:
+ 
+It is a process of binding of data with the function that act on data
+ 
+we can use getter and setter methods to access teh data
+ 
+getter is used for read only and setter is used for writing
+ 
+<script>  
+class Student  
+  {  
+    constructor()  
+    {  
+       var name;  
+       var marks;  
+    }  
+        getName()  
+        {  
+          return this.name;  
+        }  
+      setName(name)  
+      {  
+        this.name=name;  
+      }  
+      getMarks()  
+      {  
+        return this.marks;  
+      }  
+    setMarks(marks)  
+    {  
+      this.marks=marks;  
+    }  
+    }  
+    var stud=new Student();  
+     stud.setName("John");  
+     stud.setMarks(80);  
+     document.writeln(stud.getName()+" "+stud.getMarks());  
+ 
+ 
+Inheritance:
+ 
+It is a concept of copying the methods from base class to derived class
+ 
+eg:
+function Human(fName,Lname)
+{
+this.fname=fname;
+this.lnmae=lname;
+}
+ 
+Human.prototype.fullname=function(){
+return this.fname+"" + this.lname;
+}
+ 
+ 
+in Classical inheritance properties of objects can't be inherited,here we inherit the class
+ 
+prototypal inheritance we can inherit the properties of one object to another object
+ objects cannot inherit the properties of another object.
+ 
+eg:
+let A={
+name:"Nitya",
+id:"10"
+}
+ 
+let B={}
+ 
+Object.setPrototypeOf(B,A)
+ 
+console.log(B.name) //Nitya
+it is obtained by using prototype chaining
+ 
+ 
+closure: A function having access to the parent function after it has returned
+ 
+having access to the aprent scope even after the parent scope is closed
+ 
+ 
+When an outer function returns an inner function then the value returned by the inner function is stored in the form of closure
+Eg:
+function outer(i=0)
+{
+return function inner(){
+return i++;
+}
+ 
+let closure= outer();
+console.log(closure());//0
+ 
+ 
+Singleton:we can create only one instance of a class and that instance can be accessed globally
+ 
+left side of assignment operator then it's spread
+on the right then it's rest param
+ 
+Destructuring is a way in which we can unpack values of arrays or props from objects
+into distant variables
+ 
+Extracting data from array or objects into a single variable
+ 
+ 
+let a, b, rest;
+[a, b] = [10, 20];
+ 
+console.log(a);
+// Expected output: 10
+ 
+console.log(b);
+// Expected output: 20
+ 
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+ 
+console.log(rest);
+// Expected output: Array [30, 40, 50]
+ 
+ 
+deepequal
+ 
+it is a builtin object that return you a key
+they are unique
+ 
+const s1=Symbol('aba')
+         ''
+ 
+console(s1===s2)//false
+ 
+ 
+REST OPERATOR:
+ 
+if it is present on the left side of the assignment operator
+his can be particularly useful when you want to create functions that can be handle a variable num of 
+parameters
+ 
+In order to assign some array elements to variable and rest of the 
+array elements to only a single variable can be achieved by using 
+rest operator (…) as in below implementation. But one limitation 
+of rest operator is that it works correctly only with the last 
+elements implying a subarray cannot be obtained leaving the last 
+element in the array.
+ 
+Eg:
+<script> 
+var [firstName,,...lastName] = ["alpha", "beta", "gamma", "delta"]; 
+console.log(firstName);//"alpha" 
+console.log(lastName);//"gamma, delta" 
+</script>
+ 
+ 
+SPREAD OPERATOR:
+spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.
+expand, copy, concat, with math object.
+ 
+1.let-variables can be updated can't be redclared //block scope
+const-can be updated and redeclared  //block scope
+ 
+ 
+2.for of loop:
+ 
+Executes the loop block to iterate the iterables instead of object literals
+ 
+3.Arrow function:
+Anonymous func'n that doesn't return any value can be declared without function keyword
+Reduce the size of the code---|
+Makes code more readable------|  Advantages
+ 
+This works only if the function has only one statement.
+ 
+Eg:let checkNumber = (num) => num > 10 ? 
+        console.log("Yes") : console.log("No");
+    checkNumber(5);
+    checkNumber(10);
+    checkNumber(20);
+    checkNumber(32);
+ 
+4.Bind Method:
+With the bind() method, an object can borrow a method from another object.
+It is used to create a new function with same body as origial func'n bbut different this value
+use:
+wen we want to use events to access properties of one class within another class
+ 
+EG:
+const person = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  }
+}
+ 
+const member = {
+  firstName:"Hege",
+  lastName: "Nilsen",
+}
+ 
+let fullName = person.fullName.bind(member);
+ 
+BABEL:
+ 
+Babel:it is a transpiler JS compiler that converts code into browser understandable code
+Babel is a free and open-source JavaScript transcompiler(source to source)
+It allows web developers to take advantage of the newest features of the language.
+ 
+transpiler-
+transpiler is a type of translator that takes the source code of a program 
+written in a programming language as its input and produces an equivalent 
+source code in the same or a different programming language
+ 
+ 
+A transpiler, also known as a source-to-source compiler, is a type of compiler 
+that takes the source code of a program written in one programming language and 
+translates it into an equivalent program in another language. The output is still 
+at a high level, meaning it is still human-readable and not yet converted into machine code.
+This is particularly useful when you want to utilise the features of a newer language but
+need to maintain compatibility with older platforms that don't support it. For example,
+Babel is a popular JavaScript transpiler that converts ES6 (a newer version of JavaScript)
+code into ES5 (an older version) to ensure compatibility with older browsers.
+ 
+ 
+Default parameters:
+default paramters are parameters eith pre-assigned values just in case to avoid undefined
+when there isn't any argument passed to a fun.
+ 
+function myFunction(x, y) {
+  if (y === undefined) {
+    y = 2;
+  }
+}
+ 
+function multiply(a, b = 2) { 
+    return a * b; 
+} 
+let num1 = multiply(5); 
+console.log(num1); 
+let num2 = multiply(5, 8); 
+console.log(num2);
+ 
+REST OPERATOR:
+ 
+if it is present on the left side of the assignment operator
+his can be particularly useful when you want to create functions that can be handle a variable num of 
+parameters
+ 
+*In order to assign some array elements to variable and rest of the 
+array elements to only a single variable can be achieved by using 
+rest operator (…) *
+as in below implementation. But one limitation 
+of rest operator is that it works correctly only with the last 
+elements implying a subarray cannot be obtained leaving the last 
+element in the array.
+ 
+Eg:
+REST
+const [first,secon,...rest]=[1,2,3,4,5]
+console.log(first)//1
+console.log(secon)//2
+console.log(rest)//[3,4,5]
+ 
+SPREAD OPERATOR:
+spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.
+expand, copy, concat, with math object.
+ 
+Eg:
+ 
+// spread operator doing the concat job
+let arr = [1, 2, 3];
+let arr2 = [4, 5];
+arr = [...arr, ...arr2];
+console.log(arr); // [ 1, 2, 3, 4, 5 ]
+ 
+CLASS:
+ 
+A JavaScript class is not an object.
+It is a template for JavaScript objects.
+ 
+Classes are a template for creating objects. They encapsulate data with code to work on that data
+ 
+JavaScript Classes are basically a blueprint or template of the object. JavaScript classes
+can be used to create new objects in Javascript.
+ 
+EXTENDS:
+The extends keyword is used to create a child class of another class (parent).
+The child class inherits all the methods from another class.
+Inheritance is useful for code reusability: reuse properties and methods of an existing class when you create a new class.
+ 
+PROPERTY SHORTHAND:
+Object property shorthand enables us to simply pass
+in the name of the key as opposed to repeating the name and the key
+ 
+eg:
+ 
+ 
+METHOD PROPERTIES:
+wheever we have a var which is the same name as a property of an object,
+when constructing the object, we can write the property name
+-method properties  provide a shorthand syntax for defining
+methods within object literals
+Eg:
+// Without method property
+const person = {
+  name: 'John',
+  sayHello: function() {
+console.log(`Hello, my name is ${this.name}`);
+  }
+};
+person.sayHello(); // Outputs: Hello, my name is John
+With method properties, you can simplify the syntax:
+javascript
+Copy code
+// With method property
+const person = {
+  name: 'John',
+  sayHello() {
+console.log(`Hello, my name is ${this.name}`);
+  }
+};
+person.sayHello(); // Outputs: Hello, my name is John
+ 
+CLASS EXPRESSION:
+ 
+Keyword used to create a class
+ 
+syntax:Class classname{}
+ 
+class declaration \|
+ 
+class expression:
+ 
+It is another way of creating a class in js,they can be named or unnamed
+ 
+If it's named then used internally
+ 
+but not outside the class
+ 
+const variablename= new classname{}
+ 
+unamed:
+ 
+const variable = class{}
+ 
+ 
+ArrayMatching:Array destructuring allows you to extract values from arrays and assign them to variables in a concise way.
+ 
+Deep Matching:
+ 
+Deep destructuring allows you to extract values from nested structures like arrays or objects.
+ 
+Object Matching:
+ 
+Object destructuring allows you to extract values from objects and assign them to variables with matching property names
+ 
+const person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 30
+};
+const { firstName, lastName, age } = person;
+console.log(firstName);  // Outputs: John
+console.log(lastName);   // Outputs: Doe
+console.log(age);        // Outputs: 30
+OBJECT
+ 
+const colors = ['red', 'green', 'blue'];
+const [firstColor, secondColor, thirdColor] = colors;
+console.log(firstColor);  // Outputs: red
+console.log(secondColor); // Outputs: green
+console.log(thirdColor);  // Outputs: blue
+ARRAY
+ 
+in JavaScript, there are two types of equalities one must be aware of:
+ 
+Referential equality: Determines whether the two provided operands refer to the same reference/object instance.
+Deep equality: Determines whether objects are equal by comparing each property in the operands.
+Referential equality can be determined with equality operators such as strict equality (===) or coercive equality (==) and also by using Object.is() functions, but determining deep equality is tricky as the objects can be nested. However, the following five ways of performing object comparisons make developers’ work easier when a deep equality comparison is required.
+ 
+Deep Compare:
+ 
+Deep destructuring allows you to extract values from nested structures like arrays or objects.
+ 
+It can be achieved in 5 ways:
+1.Manual comparison
+2.Json stringify method
+3.Comp using Loadash lib
+4.Deep equal lib
+5.Framework-specific method
+ 
+ 
+Set:
+It is a single collection of values that are unique.valuehere itself is a unique key.
+ 
+Add i sused to add a new value
+WeakSet with a set is that a WeakSet is a collection of objects and not values of some particular type.
+ 
+WeakMap is Map -like collection that allows only objects as keys and removes them together with associated value once they become inaccessible by other means.
+WeakSet is Set -like collection that stores only objects and removes them once they become inaccessible by other means.
+ 
+EG:
+let weakSet = new WeakSet();
+let obj1 = { key: 'value1' };
+let obj2 = { key: 'value2' };
+weakSet.add(obj1);
+weakSet.add(obj2);
+console.log(weakSet.has(obj1)); // Output: true
+obj1 = null; // Removing the reference to obj1
+console.log(weakSet.has(obj1)); // Output: false
+[1:11 PM] Jancy Thorupunuri
+let weakMap = new WeakMap();
+let key1 = {};
+let key2 = {};
+weakMap.set(key1, 'value1');
+weakMap.set(key2, 'value2');
+console.log(weakMap.get(key1)); // Output: value1
+key1 = null; // Removing the reference to key1
+console.log(weakMap.get(key1)); // Output: undefined
+ 
+Maps:
+A Map holds key-value pairs where the keys can be any datatype.
+ 
+A Map remembers the original insertion order of the keys.
+ 
+A Map has a property that represents the size of the map.
+ 
+Here set and get are used
+ 
+Typed Array:
+Typed arrays are array-like objects that provide a technique for reading and writing raw binary data in memory buffers.
+Typed arrays have self-descriptive names. Typed Array is like mirror reflection View and not actual Arrays.
+When we create an instance of a Typed array which in turn creates a corresponding ArrayBuffer inside the memory automatically, this is the place 
+\where the elements get stored.
+ 
+ 
+PROMISES
+it is an object that will produce a single value some time in the future
+A JavaScript Promise object can be:
+ 
+Pending
+Fulfilled
+Rejected
+The Promise object supports two properties: state and result.
+ 
+While a Promise object is "pending" (working), the result is undefined.
+ 
+When a Promise object is "fulfilled", the result is a value.
+ 
+When a Promise object is "rejected", the result is an error object.
+ 
+Promise.all() The Promise.all() static method takes an iterable of promises as input and returns a single Promise . This returned promise 
+fulfills when all of the input's promises fulfill (including when an empty iterable is passed), with an array of the fulfillment values.
+ 
+any() method is one of the promise concurrency methods. This method is useful for returning the first promise that fulfills.
+It short-circuits after a promise fulfills, so it does not wait for the other promises to complete once it finds one.
+ 
+PROMISE.RACE()- will return the promise eith the shortest execution time an array of promises
+returns a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects, with the value or
+reason from that promise.
+ 
+Promise. race takes the first settled Promise . Promise. any takes the first fulfilled Promise
+ 
+promise.then
+ 
+JavaScript Promise then() method is called whenever a promise is resolved. It takes data from the resolved promise.
+It can take up to two arguments which are callback functions for the fulfilled and rejected cases respectively.
+ 
+The then keyword is used with Promises and allows you to specify what should happen after a Promise is fulfilled. On the other hand, 
+the await keyword can only be used within an asynchronous function and suspends the execution of the function until the specified 
+Promise is resolved
+ 
+ 
+JavaScript Promise catch() method is called whenever a promise is rejected. This method itself returns a promise so it can also be
+used to chain promises. This method is used for error handling. This method is mainly used after .then to chain a promise and handle
+reject condition. This method internally calls .then with undefined and rejected conditions as arguments
+ 
+ 
+The ES6 is a JavaScript standard. With the help of ES6, we can create modules in JavaScript. In a module, there can be classes,
+functions, variables, and objects as well. To make all these available in another file, we can use export and import.
+The export and import are the keywords used for exporting and importing one or more members in a module.
+ 
+ 
+ 
+Destructuring is a way in which we can unpack values of arrays or props from objects
+into distant variables
+ 
+var list=[1,2,3]
+var [a,b,c]=list
+console.log(a);
+console.log(b);
+console.log(c);
+ 
+ 
+ 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+14-12-2023
+ 
+ 
+TypeScript:
+it is a superset of js that adds static typing
+static typing-data types are defined during compile
+time and cannot change during runtime. 
+Declarations:
+VAR-Global scoped
+  variables can be redeclared within the same scope
+LET-block scoped
+  variables can be cannot redeclared within the same scope
+CONST-block scoped
+  variables cannot be reassigned within after they are redeclared
+ 
+Scope -
+ 
+-The scope of a variable specifies where the variable is defined
+The availability of a variable within a program is determined by its scope
+-the visibility of variable
+Local Scope:
+ 
+As the name specified, are declared within the block like methods,
+loops etc. Local variables are accessible only within the construct
+where they are declared.
+ 
+Global Scope:
+If the variable is declared outside the construct then we can access
+the variable anywhere. This is known as Global Scope.
+Class Scope:
+If a variable is declared inside the class then we can access that
+variable within the class only.
+ 
+Constants:
+ 
+Typescript constants are variables, whose values cannot be modified.
+We declare them using the keyword const. They are block-scoped just
+like the let keyword. Their value cannot be changed neither they can be redeclared.
+ 
+Type Assertions:
+ 
+Type assertions just inform the compiler about the type of the variable.
+It is similar to typecasting but it doesn't reconstruct the code nor throw any
+exceptions or do anything at runtime.
+-We can either use <> angular brackets or as keywords to do type assertion.
+-When we migrate code from typescript to another language type assertion comes
+into play. Runtime support comes with typecasting, whereas type assertion has
+no effect on runtime. It is used by the compiler.
+ 
+ 
+Type Guards:
+Narrow down the type of a var within a certain block of code.
+Type guards are a feature in TypeScript that allows for more precise type-checking
+within specific blocks of code. 
+-A type guard is some expression that performs a runtime check that guarantees
+ 
+Functions:
+similar to js, but typescript adds static typing capabilities, allowing you to
+specify the types of parameters and return type
+ 
+TypeScript, as JavaScript, doesn't have a main function. The code is executed
+from top to bottom, so you can just create the function and call it at the end
+of the main file, after the imports
+ 
+-Named Functions
+ 
+A named function is one where you declare and call a function by its given name.
+Functions can also include parameter types and return type.
+ 
+ 
+FunParams:
+ 
+Function parameters are the names listed in the function definition.
+Function arguments are the real values passed to (and received by) the function.
+ 
+TypeScript, compiler accepts the same number and type of arguments as defined
+in the function signature. If the compiler does not match the same parameter
+as in the function signature, then it will give the compilation error
+ 
+Optional parameters:WE can make parameter optional by adding '?' after their name
+ 
+VariableArgs:
+we can use the rest parameter syntax to create funs that accept a variable num of arguments.
+This allows us to pass any number of arguments to a func and the func will receive them as an array
+ 
+ 
+REST Spread Destructuring:
+ 
+REST OPERATOR:
+ 
+if it is present on the left side of the assignment operator
+his can be particularly useful when you want to create functions that can be handle a variable num of 
+parameters
+ 
+*In order to assign some array elements to variable and rest of the 
+array elements to only a single variable can be achieved by using 
+rest operator (…) *
+as in below implementation. But one limitation 
+of rest operator is that it works correctly only with the last 
+elements implying a subarray cannot be obtained leaving the last 
+element in the array.
+ 
+Eg:
+REST
+const [first,secon,...rest]=[1,2,3,4,5]
+console.log(first)//1
+console.log(secon)//2
+console.log(rest)//[3,4,5]
+ 
+SPREAD OPERATOR: 
+if it is present on the right side of the assignment operator
+spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.
+expand, copy, concat, with math object.
+ 
+Eg:
+ 
+// spread operator doing the concat job
+let arr = [1, 2, 3];
+let arr2 = [4, 5];
+arr = [...arr, ...arr2];
+console.log(arr); // [ 1, 2, 3, 4, 5 ]
+ 
+ 
+assign() An alternative to the spread operator is the Object. assign() method.
+ 
+Template Literals:
+ 
+They are enclosed by backticks ``.These are used in order to concatenate string literals with strings.
+ 
+Function Overloading:
+ 
+TypeScript provides the concept of function overloading. You can have multiple functions with the same name
+but different parameter types and return type. However, the number of parameters should be the same.
+ 
+ 
+Arrays:
+An array is a user-defined data type
+Arrays are used to store homogenous data.
+* an array is a collection of values of the same data type. It is a user defined type.*
+const names: string[] = [];
+names.push("Dylan")
+ 
+Readonly is used to prevent arrays from being changed.
+ 
+tsconfig.json:
+The tsconfig.json file specifies the root files and the compiler options required to compile the project.
+JavaScript projects can use a jsconfig.json file instead, which acts almost the same but has some
+JavaScript-related compiler flags enabled by default.
+to create:npx tsc --init
+ 
+ 
+
+--------PART TWO---------------------------------------------------------------------------------------------------
+Tuple:
+A tuple is an ordered list of elements and in TypeScript, a Tuple represents an object with a specific
+number of properties i.e. have a fixed length, each index having a predefined data type. 
+Syntax:
+type TupleTypeName = [Type1, Type2, ...];
+ 
+Enum:
+An enum is a special "class" that represents a group of constants (unchangeable variables).
+ 
+Enums come in two flavors string and numeric.
+it makes easier to work with a set of constants by giving them meaningful names.
+By default an enum is number based, starting at zero, and each option is assigned an increment by one.
+ 
+ 
+Interface:
+Interfaces are a feature of TypeScript that allows us to define the structure or shape of an object
+and specify the properties and methods that an object has or should have.
+-nterfaces allow you to break your code into smaller, more modular pieces.
+By separating behavior from implementation, interfaces make it easier to modify and extend code
+without affecting the rest of the program
+ 
+class:
+a class is a template or blueprint for creating objects. It is a logical entity.
+A class keyword is used to declare a class in TypeScript.
+ 
+class and interface:
+ 
+A class is a blueprint from which we can create objects that share the same configuration - properties and methods.
+An interface is a group of related properties and methods that describe an object, but neither provides implementation nor initialisation for them
+ 
+Generics:
+ 
+Generics are code templates that you can define and reuse throughout your codebase.
+They provide a way to tell functions, classes, or interfaces what type you want to use when you call it.
+Generics offer multiple benefits to TypeScript developers, but chiefly they allow us to write reusable
+and flexible code without sacrificing type safety.
+ 
+Iterator:
+Generator which can stop midway and then continue from where it stopped.
+They can create iterable objects. they can be paused and resumed at any point.
+-is a function that produces or yields a sequence of values using a yield statement
+ 
+-Iterators are the objects that use the next() method to get the next value 
+of the sequence.
+Generator
+ 
+Decorator:
+ 
+What are the decorators in TypeScript?
+What are “decorators” in typescript and how to use ...
+A Decorator is a special kind of declaration that can be attached to a class declaration, 
+method, accessor, property, or parameter.Decorators use the form @expression , where expression
+must evaluate to a function that will be called at runtime with information about the decorated declaration.
+-Decorators are a powerful feature in TypeScript that allows developers to modify or extend the behavior of classes, methods, 
+accessors, and properties. They offer an elegant way to add functionality or modify the behavior of existing constructs 
+without altering their original implementation
+ 
+ 
+Inheritance:
+-It is a concept of copying the methods from base class to derived class
+- TypeScript supports the class-based inheritance which comes from ES6 version. 
+The TypeScript uses class inheritance through the extends keyword. TypeScript supports 
+only single inheritance and multilevel inheritance. It doesn't support multiple and hybrid inheritance.
+ 
+Mixins:
+In TypeScript, a mixin is a way to combine multiple classes or objects into a single class that inherits 
+the properties and methods of all the combined classes. This can be useful when you want to reuse code 
+across multiple classes without creating a deep inheritance hierarchy.
+ 
+Namespace:
+A namespace is also known as internal modules. A namespace can also include interfaces, 
+classes, functions, and variables to support a group of related functionalities.
+-TypeScript, namespaces provide a way to organize and encapsulate code by grouping related functionalities 
+under a common name. Namespaces are a TypeScript-specific feature and are used to avoid naming conflicts and 
+to create modular and well-organized code.
+ 
+Modules:
+. A module is a way to create a group of related variables, functions, classes, and interfaces, etc. 
+-It executes in the local scope, not in the global scope.
+-advantage of module :prevent the default global scope of the code and also to organize and maintain a large code base.
+-Internal Module is also known as namespace.
+ 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+ 
+REACT AND REDUX
+ 
+1-what is react
+it is a front-end js library developed by fb in 2011.
+it is used to developing complex and interactive web and mobile UI.
+it is js library for building user interfaces or UI components.
+it is widely used for creating single-page applications.
+2- features of react
+it uses the virtual DOM instead of the real DOM.
+it uses serve-side rendering
+//Server generates teh html page and then sent to the client
+it follows uni-directional data flow or data binding.(You can only transfer data from parent to child and not vice versa.)
+3-Major advantages of react
+it uses the virtual DOM instead of the real DOM.
+it follows a unidirectional data flow, which means that data flows in one direction- from parent to child components.
+it increases aplplication's performance
+it can be conviently used on the client as well as server side.
+Beacuse of jsx code's readability increases.
+4-Limitations of react
+it is just a library, not a full developed framework
+this library is very large and takes time to understand.
+it can be little diffcult for the novice(beginners) programmers to understand.
+coding gets complex as it uses inline templating and JSX
+5-what is JSX(JAVASCRIPT XML)
+It is a syntax extension used in react to describe what the UI should look like.
+it allows us to write XML or HTML like code directly within our js files.
+it makes the code more readable.
+6- what is virtual DOM
+This is called reconciliation.
+Virtual Document Object Model is used in react to optimize the updating of the actual DOM.
+React creates a VIRTUAL DOM in memory.
+Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all
+  the necessary manipulating, before making the changes in the browser DOM. React only changes what needs to be changed!
+Its Working- The virtual DOM works in 3 steps
+1.whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM respresentation.
+2. Then the diff between the previous DOM representation and the new one is calculated.
+3.Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
+7- why can't browsers read JSX?
+JSX isn't directly supported by browsers, requiring conversion by tools like Babel to transform JSX into valid JavaScript.
+8- How is react different from Angular?
+                    REACT                                        ANGULAR
+ARCHITECTURE- only the view of MVC                        Complete MVC(Model View Controller)
+RENDERING   - server-side rendering                       Client-side rendering
+LANGUAGE    - Uses JSX                                    Uses Typescript
+DOM         - uses virtual DOM                            Uses real DOM
+DATABINDING - one way data binding                        Two- way data binding
+DEBUGGING   - complie-time debugging                      run-time debugging
+AUTHOR      - facebook                                    Google
+ 
+9-What do you understand from "in react , everything is a component"?
+components are the building blocks of a react application's UI. These components split the entire UI into small independent
+and reuseable pieces.Then it renders each of these components independent of each other without affecting the rest of the UI.
+10- render() in react.
+it is part of a class comp.its where the comp describes what should be displayed on the UI.
+This method is mandatory for class comp, and it must return a react element which is representation of native DOM comp.
+if more than one HTML element needs to be rendered, then they must be grouped together inside one enclosing tag such as
+<FORM>, <GROUP>, <DIV>.
+https://refine.dev/blog/react-props/
+/// Components in React are JavaScript functions and ES6 classes. The arguments we pass to functions are now "props" in 
+React Components.
+11- what is props?
+Props in React are inputs that you pass into components.
+Props as we know are passed to components, and from one component to another
+props are read-only components.
+Props are immutable, which means that they cannot be modified.
+Once a props is passed to a component, that component cannot change the value of the props.
+Props are used for communication uni-directional.
+12-what is state and how it is used?
+State is an object that stores the data or info about a comp
+State is not passed from one component to the other, it is passed within the component only. 
+The state is local data used and maintained by one component only.
+Two components cannot use or maintain one state.
+State is mutable. states can be changed at will in the comp.
+state are read-and-write components.
+states are the objects which contain data or info about comp.
+They are accessed through this.state()
+13-what is arrow functions and how it is used?
+It is concise way to write anonymous function expressions.
+They also called as "fatArrow"(=>)the functions.
+Anonymous func'n that doesn't return any value can be declared without function keyword
+Reduce the size of the code---|
+Makes code more readable------|  Advantages
+Arrow functions reduce the size of the code. The return statement and function 
+brackets are optional for single-line functions. 
+It increases the readability of the code.
+Uses-
+These are mostly useful while working with higher order function(
+functions that return one or multiple components, depending on array data.
+ex:map,filter)
+14-
+STATEFUL COMP                                    STATELESS COMP
+also known as class comp                        also known as functional comp
+Have a local state and can hold and manage      do not have local state
+   local state
+It can use lifecycle methods(compDidMount,     Cannot use lifecycle methods
+compDidUpdate, compWillUnmount)
+It is used when a comp needs to maintain       It is used for presentational comp
+and manage its own state                       that are solely responsible 
+					                    for displaying info.
+ 
+
+13-  different phasesof react comp life cycle ?
+Initial Rendering Phase:
+-These methods are called when an instance of a component is being
+created and inserted into the DOM.
+-This is the phase when the comp is about to start its life jurney
+and make its way to the DOM.
+Updating Phase: 
+-These methods are called when a component is being re-rendered 
+as a result of changes to either its props or state.
+-Once the comp gets added to the DOM,It can potentially update and rerender
+only when a prop or state changes occur.
+Unmounting Phase:
+-This is the final phase of comp lifecycle in which comp is removed or 
+destroyed from the DOM.
+ 
+14.Explain the lifecycle methods of React comp:
+i. componentWillMount():execute just before rendering takes place on both sever and client sides.
+ii.ComponentDidMount():execute on the client side only after the first render.
+iii.componentWillReceiveProps():invoked(to call on) as soon as the props are recieved 
+  from the parent class and before another render is called.
+iv.should compUpdate():returns true or flase based on the conditions. if we want 
+  comp to update returns true else false. by default, it returns false.
+v.compWillUpdate():called before rendering takes place in DOM.
+vi.compDidUpdate():called immediately after rendering takes place
+vii.CompWillUnmount()::called after the comp is unmounted from DOM.it is used to 
+  clear up the memory spaces.
+
+15.Events in react:
+An event is an action that occurs as per the user's instruction 
+as input and gives the output in response
+ 
+16.how do you modularize code in react
+We can modularize code by using the export and import properties.
+They help in writing the comp separately in different files.
+ 
+17-what are synthentic events in react
+Synthetic events are the obj which act as a cross-browser wrapper.They combine
+the behaviour of diff browsers into one API.This is done to make sure that the events
+show consistent props across diff browsers
+Eg:onclick,onSubmit
+ They are called "synthentic "bcoz they provide a consistent interface for 
+ handling events across diff browsers.
+ 
+18-what do you understand by refs in react
+Refs is the short hand for references in React. Refs are a function provided by
+React to access the DOM element and the React element that you might have 
+created on your own. They are used in cases where we want to change the 
+value of a child component, without making use of props and all. 
+They have wide functionality as we can use callbacks
+ 
+-useRef is primarily used to access and manipulate the DOM or store mutable values 
+without triggering re-renders. I
+ 
+-useState is used for managing component state, triggering re-renders when the 
+state updates
+ 
+-refs (short for references) provide a way to interact with the DOM 
+or to reference a React component. Refs are commonly used to:
+Accessing the DOM:
+Accessing react components
+ 
+There are two types of refs in React: string refs (legacy),callback refs (modern)
+ 
+19-List some of the cases when you should use Refs
+Acessing the DOM directly
+Integrating with third-party libraries.
+Managing focus and selection.
+Interacting with class comp
+ 
+20.How are forms created in react
+In React, creating forms involves using the <form> element and various 
+form-related elements like <input>, <textarea>, and <select>. 
+React components manage the form state and handle form submissions 
+through controlled components, where the form elements receive 
+their values and event handlers via props.to handle input and submissions
+ 
+21.What are higher order components(HOC)
+In React, a higher-order component is a function that takes a component 
+as an argument and returns a new component that wraps the original component. 
+HOCs allow you to add additional functionality to a component without 
+modifying the component's code.This can involve adding new props, 
+intercepting lifecycle methods, or managing state.
+ 
+22.What can you do with HOC
+Code Reuse
+State Abstraction and manipulation
+props Manipulation
+Authentication and Authorization
+ 
+23.What are pure components
+React pure components are the components that do not re-render 
+when the value of props and state has been updated with the same values
+Since these components do not cause re-rendering when the same values 
+are passed thus they improve performance.
+ 
+24.What were the major probs of MVC framework
+DOM manipulation is expensive
+Apps are slow and inefficient
+Huge memory wastage
+Complicated models due to circular dependencies
+ 
+25.Explain FLUX
+Flux is an architechtural pattern that focuses on unidirectional data flow,as
+the derived data is stored in a centralized store and any updates that has to
+happen occur here by which it makes the whole app more stable and reduces errors
+making it easier to 
+reason about state changes and manage the application's data flow.
+ 4 comps;-ACTION,DISPACTHER,STORE,VIEW.
+ 
+26.What is Redux
+-Redux is a pattern and library for managing and updating application state,
+using events called "actions". It serves as a centralized store for state 
+that needs to be used across your entire application, with rules ensuring 
+that the state can only be updated in a predictable fashion.
+ 
+Redux provides a structured and predictable way to manage the state 
+of an application. It helps developers maintain a clear, single source 
+of truth for data, reducing the chances of bugs and making it easier 
+to reason about application behavior.It follows unidirectional data flow pattern.
+ 
+27.What are the three principles that Redux Follows
+i.Single source of truth.
+ii.state is read-only
+iii.changes are made with pure functions
+ 
+28.What do you understand by Single source of truth
+ 
+29.Components Of Redux
+Action:Its an object that describes what happened
+Reducer:place to determine how the state will change
+Store: state of the entire application is stored in the one place
+View:It simply displays the data provided by the store.
+ 
+30.Role of reducer
+reducer is a pure function responsible for specifying how the state of an 
+application changes in response to dispatched actions. The reducer takes 
+the current state and an action as input and returns a new state.
+ 
+31.How are Actions defined in Redux
+Indicates type of action being performed
+Defined as a string const and you can add more props to it.
+Created using functions called Action Creators
+ 
+32.significance of store in redux
+It is a component of redux
+state of the entire application is stored in the one place
+ 
+33.Redux and flux diff
+  REDUX:
+  redux is a js library
+  store contain state and change logic.
+  it has two comp :-ACTION CREATOR, STORE-REDUCER,STATE
+  redux can have only one global store in one application.
+  state is immutated.
+  Redux only has one store and encourages using simple reducer functions to 
+  interact with various properties on the store.
+  
+ FLUX:
+  flux is an architecture.
+  store and change logic are separate.
+  4 comps;-ACTION,DISPACTHER,STORE,VIEW.
+  flux can have multiple stores in one application
+  state is mutable.
+  Flux has multiple stores and a central dispatcher to manage communication to
+  those stores.
+
+34.Adv of Redux
+server-side rendering
+Middleware support
+Easy testing
+centralized storage
+easier debugging
+ 
+35.React Router
+React Router is a popular library for handling routing in React applications.
+It is used for developing single page web applications with multiple views or pages.
+It as a simple API.
+ 
+36.Switch keyword used in React Router
+-The <Switch> component is used to render components only when the path will 
+be matched. Otherwise, it returns to the not found component.
+-URL are defined in sequentially pattern
+-that helps to control the rendering of routes 
+and prevents multiple matches from being rendered simultaneously.
+ 
+37.Need of router in React
+ReactJS Router is mainly used for developing Single Page Web Applications. 
+React Router is used to define multiple routes in the application. When a 
+user types a specific URL into the browser, and if this URL path matches any 
+'route' inside the router file, the user will be redirected to that particular 
+route.
+ 
+38.adv of React Router
+Navigation
+Server-side rendering
+Dynamic routing
+Flexibility
+ 
+39.Stateless Comp
+ 
+ 
+40.React diff from Angular and VUE js
+ 
+41.why to use reactjs
+React is flexible
+Performance
+Easy to learn
+Reusable components
+one-way data binding
+virtuaL DOM
+Unidirectinal data flow
+Flexibility
+ 
+42.Diff between controlled and uncontrolled comp
+an uncontrolled component manages its own local state and does not rely on 
+props to update its values. 
+A controlled component driven by props handed down from its parent component. This enables the parent 
+component to fully specify the child component's behavior.
+ 
+ A controlled component is driven by props handed down 
+ from its parent component. This enables the parent component to fully 
+ specify the child component's behavior.
+ An uncontrolled component manages its own local state and does not rely 
+ on props to update its values
+
+43.What is a container component
+Containers are components that store data and logic and not concerned with the 
+rendering of the view.Containers are connected components that get the data  
+from the state and pass down the actions to the dipatcher
+ 
+44.what are selectors? why would you reselect or a memoization 
+library?
+-selectors are functions that take state and return a portion of it while
+applying calculations,transformations,mapping etc.In this way the data is 
+encapsulated.Since the operations are expensive in case of no state change reselect 
+is used where it returns the result from the cache in case of no arg change
+ 
+Selectors are functions that extract specific pieces of data from the state.
+They help in isolating the parts of the state that a component needs
+ 
+ 
+45.what are approaches of handling side effects in redux?
+It manages asynchronous operations, such as data fetching, and interacting 
+with external APIs.
+Side effects are mostly asymc calls and are handled byy redux thunks or redux-saga
+Thunks are functions that can be dispatched as actions in Redux. With the help
+of the redux-thunk middleware, thunks have access to the dispatch and getState 
+functions
+redux-saga is a middleware for handling side effects in Redux using generator 
+functions.
+ 
+46.what are actions and action creators?
+(31)
+ 
+47.how could you optmize the performance of a react application?
+-By using pure component
+-Using memoization reselect
+-Reducing number of re renders
+-Reducing the size of js file
+-Using dynamic inputs and chunks
+ 
+48.Do you know what the reconciilation alogorithm is?
+Renconciliation algorithm compares the prev virtual dom with the new one and 
+determines the best way to update the real dom
+ 
+49.Do you know the context API?
+ 
+-The Context API is a part of React that provides a way to share values, such 
+as state or functions, between components without the need to pass the props 
+-Context API shares the data among the components where as react hook manages 
+the state within a single comp
+ 
+50.How do you handle method binding in components?
+By using arrow functions
+ 
+51.what are new features in react 16+?
+new hooks
+Error boundaries
+ 
+ 
+REACT TOOLKIT
+ 
+ 
+ 
+REDUX:
+  redux is a js library
+  store contain state and change logic.
+  it has two comp :-ACTION CREATOR, STORE-REDUCER,STATE
+  redux can have only one global store in one application.
+  state is immutated.
+  Redux only has one store and encourages using simple reducer functions to 
+  interact with various properties on the store.
+FLUX:
+  flux is an architecture.
+  store and change logic are separate.
+  4 comps;-ACTION,DISPACTHER,STORE,VIEW.
+  flux can have multiple stores in one application
+  state is mutable.
+  Flux has multiple stores and a central dispatcher to manage communication to
+  those stores.
+ 
+*Virtual DOM: It creates a copy of the entire DOM in the memory.
+*Shadow DOM: It does not create a complete representation of the entire DOM.
+It adds subtrees of DOM elements into the document instead of adding them to the
+main DOM tree
+ 
+When Parentcomponent pass the data as props to its child component again and 
+again to reach its desired component is known as the prop drilling . 
+In this case prop is getting passed between the components where it is not 
+needed, hence we should avoid doing
+ 
+-To avoid prop drilling, you can use techniques like React context or state 
+management libraries (e.g., Redux, MobX) to make the data accessible to 
+components deeper in the tree without manually passing props through all the 
+intermediate components.
+ 
+-Props are used to pass data from a parent component to a child component, 
+while state is used to manage data within a component. Props are immutable and 
+cannot be changed within a component, while state is mutable and can be updated 
+using the setState function.
+--------------------------NODEJS--------------------------------------------
+1.what is nodejs?
+-Node.js is a runtime environment that allows you to run JavaScript on the 
+ server side. It uses the V8 JavaScript engine from Google Chrome and provides 
+ a non-blocking, event-driven architecture. Node.js is commonly used for 
+ building scalable network applications, handling asynchronous tasks, 
+ and creating real-time applications like chat applications or streaming services.
+
+2.why do you need it
+ it helps to handle large num of concurent connections efficiently 
+ You might choose Node.js for its ability to handle a large number of 
+ concurrent connections efficiently, making it suitable for applications 
+ that require high-performance, such as web servers and APIs. Its event-driven 
+ model enables developers to write server-side code using JavaScript, which is 
+ traditionally associated with client-side scripting.
+3.Node js how it's works
+ Node.js works using a non-blocking, event-driven architecture. 
+ 
+4.Event loop?
+ The event loop constantly checks the event queue for completed events or tasks. 
+ If there are any, it picks them up and executes their associated callback 
+ functions.
+5.Event Queue?
+ When an asynchronous operation (e.g., reading a file, making a network request) 
+ is initiated, Node.js doesn't wait for it to complete. Instead, it continues 
+ executing the rest of the program.
+
+6.built-in-modules (or) Core Modules
+ 1-fs (File System): Provides methods for interacting with the file system, 
+ such as reading or writing files.
+  const fs = require('fs');
+ 2-http: Enables the creation of HTTP servers and clients.
+  const http = require('http');
+ 3-https: Similar to the http module but for secure HTTPS communication.
+  const https=require('https')
+ 4-path: Helps with handling file paths and resolving path-related issues.
+  const path=require('path')
+ 5-os (Operating System): Provides information about the operating system.
+  const os=require('os')
+ 6-events: Allows the creation and handling of custom events.
+  const events=require('events');
+ 7-crypto: Offers cryptographic functionality, such as creating hashes and handling OpenSSL.
+  const crypto = require('crypto');
+ 8-querystring: Helps with parsing and formatting URL query strings.
+  const querystring = require('querystring');
+ 9-url: Assists in URL resolution and parsing.
+  const url=require('url')
+ 10-zlib: Provides compression and decompression functionality using the zlib library.
+  const zlib=require('zlib');
+7-Local Modules or User Defined Modules
+ To organize and modularize the code.
+ Local modules, also known as user-defined modules, in Node.js are modules created by users 
+ for their specific application needs. These modules are not part of the Node.js
+ core modules and are designed to encapsulate and organize functionality into 
+ reusable components. Users can create their own modules to promote code modular
+ ity, maintainability, and reusability.
+ - create a module
+ - using a local module
+ -exporting functions /objects.
+ -exporting mutliple functions/objects
+8-External Modules or Third party Modules
+ External modules, also known as third-party modules or npm (Node Package Manager) modules,
+ are modules developed by the Node.js community or other developers outside of 
+ the core Node.js project. These modules provide additional functionality and 
+ can be easily integrated into Node.js applications using npm, which is the
+ default package manager for Node.js.
+ how external modules work in Node.js:
+  -Installing External Modules:
+  -using external modules
+  -managing dependencies with `package.json`
+  -sharing and discovering modules
+9-Publishing local modules on npmjs.com
+ Publishing local modules to npmjs.com involves a few steps 
+  -create a npm account-
+  -npm cli-make sure you have install npm 
+ STEPS TO PUBLISH A LOCAL MODULE:
+  -initialize your package(npm init)
+  - login to npm(npm login)
+  -publish your module(npm publish --access public)
+  - verify on npmjs.com(npm publish --access public)
+  -updating your module.
+10-FileSystem Module	
+ The File System module in Node.js, often abbreviated as fs, is a core module 
+ that provides functionality for interacting with the file system.
+  -reading from a file(fs.readfile/fs.readfilesync)
+  -writing to a file(fs.writefile/fs.writefilesync)
+  - checking if a file or directory exists(fs.existsSync)
+  -creating and deleting directories(fs.mkdir)
+  -file and directory info(fs.stat) 
+11-streams 
+ Streams are a type of data-handling methods and are used to read or write input
+ into output sequentially. Streams are used to handle reading/writing files or 
+ exchanging information in an efficient way.
+ -readable streams:streams from which data can be read
+ -writable streams:are used for writing data to a destination
+ -duplex streams:Duplex streams are streams that allow both reading and writing of data
+ -transform streams: Transform streams are a special type of Duplex stream that allows 
+  data to be modified as it flows through the stream. 
+12-Events-an action that occurs as per the user's instruction as input and 
+  gives the output in response. 
+ eventemitter class-importing the events modules,creating an eventemitter instance
+ emitting events
+ listenting to events
+ once and removelistener
+13-HTTP MODULE-server(Hypertext Transfer Protocol)
+ The http module in Node.js allows you to create HTTP servers and make HTTP requests
+ Creating an https server:
+  Step 1 : Include HTTP Module:-var http = require('http');
+  Step 2 : Create Server:-creates an HTTP server.
+  Create a server using the method createServer() to listen at port numbered 9000.
+  http.createServer(function (req, res) {}).listen(9000); 
+  Step 3 : Prepare response:
+  We shall prepare a response with HTTP header and a message.
+  Step 4 : Run the Web Serve
+  Step 5 : Test the Web Server
+EX:
+ // include http module in the file
+ var http = require('http');
+ 
+ // create a server
+ http.createServer(function (req, res) {
+    // http header
+    // 200 - is the OK message
+    // to respond with html content, 'Content-Type' should be 'text/html'
+    res.writeHead(200, {'Content-Type': 'text/html'}); 
+    res.write('Node.js says hello!'); //write a response to the client
+    res.end(); //end the response
+}).listen(9000); //the server object listens on port 9000
+
+
+14-HTTP MODULE-client
+  -listen makes the server listen on the specified port.
+ Making an HTTP Request (Client):
+  -http.request initiates an HTTP request.
+  -The options object specifies details like the hostname, port, path, and 
+   HTTP method.
+  -Event listeners (data and end) handle the response data.
+  -The error event handles errors.
+  -req.end() signals the end of the request.
+15-npm(Node Package Manager)
+  NPM is a package manager for Node.js packages
+   -installation(npm -v)
+   - managing pacakges(npm install package-name)
+   -package.json(npm init)
+   -local and global packages(npm install package-name --save)
+   -scripts
+16-npm clic commands
+ npm
+JavaScript package manager
+•
+npm access
+Set access level on published packages
+•
+npm adduser
+Add a registry user account
+•
+npm audit
+Run a security audit
+•
+npm bugs
+Bugs for a package in a web browser maybe
+•
+npm cache
+Manipulates packages cache
+•
+npm ci
+Install a project with a clean slate
+•
+npm completion
+Tab completion for npm
+•
+npm config
+Manage the npm configuration files
+•
+npm dedupe
+Reduce duplication
+•
+npm deprecate
+Deprecate a version of a package
+•
+npm diff
+The registry diff command
+•
+npm dist-tag
+Modify package distribution tags
+•
+npm docs
+Docs for a package in a web browser maybe
+•
+npm doctor
+Check your environments
+•
+npm edit
+Edit an installed package
+•
+npm exec
+Run a command from an npm package
+•
+npm explain
+Explain installed packages
+•
+npm explore
+Browse an installed package
+•
+npm find-dupes
+Find duplication in the package tree
+•
+npm fund
+Retrieve funding information
+•
+npm help
+Search npm help documentation
+•
+npm help-search
+Get help on npm
+•
+npm hook
+Manage registry hooks
+•
+npm init
+Create a package.json file
+•
+npm install
+Install a package
+•
+npm install-ci-test
+Install a project with a clean slate and run tests
+•
+npm install-test
+Install package(s) and run tests
+•
+npm link
+Symlink a package folder
+•
+npm login
+Login to a registry user account
+•
+npm logout
+Log out of the registry
+•
+npm ls
+List installed packages
+•
+npm org
+Manage orgs
+•
+npm outdated
+Check for outdated packages
+•
+npm owner
+Manage package owners
+•
+npm pack
+Create a tarball from a package
+•
+npm ping
+Ping npm registry
+•
+npm pkg
+Manages your package.json
+•
+npm prefix
+Display prefix
+•
+npm profile
+Change settings on your registry profile
+•
+npm prune
+Remove extraneous packages
+•
+npm publish
+Publish a package
+•
+npm query
+Retrieve a filtered list of packages
+•
+npm rebuild
+Rebuild a package
+•
+npm repo
+Open package repository page in the browser
+•
+npm restart
+Restart a package
+•
+npm root
+Display npm root
+•
+npm run-script
+Run arbitrary package scripts
+•
+npm sbom
+Generate a Software Bill of Materials (SBOM)
+•
+npm search
+Search for packages
+•
+npm shrinkwrap
+Lock down dependency versions for publication
+•
+npm star
+Mark your favorite packages
+•
+npm stars
+View packages marked as favorites
+•
+npm start
+Start a package
+•
+npm stop
+Stop a package
+•
+npm team
+Manage organization teams and team memberships
+•
+npm test
+Test a package
+•
+npm token
+Manage your authentication tokens
+•
+npm uninstall
+Remove a package
+•
+npm unpublish
+Remove a package from the registry
+•
+npm unstar
+Remove an item from your favorite packages
+•
+npm update
+Update a package
+•
+npm version
+Bump a package version
+•
+npm view
+View registry info
+•
+npm whoami
+Display npm username
+•
+npx
+Run a command from an npm package
+17-node module versions
+ Each module can have its own version number, and this version information is 
+ used to manage dependencies in Node.js applications.
+  i-version specification in pacakge.json
+   -exact version:
+     dependencies:{
+       "example-module":"1.2.3"}
+   - caret ranges("^1.2.3"):
+     Allows changes that do not modify the left-most non-zero element in 
+     the [major, minor, patch] tuple.
+     Compatible with version, i.e., accept new minor and patch versions
+   - tilde ranges("~1.2.3"):
+     Approximately equivalent to version, i.e., only accept new patch versions
+   -range(">1.2.3 < 2.0.0)
+  ii-semver(semantic versioning)
+  iii-dependency resultion
+  iv-lockfiles
+   v-updating modules
+18-importance of package.json
+ The package.json file is the core of Node.js system. It is the manifest file of
+ any Node.js project and contains the metadata of the project.The package.json 
+ file is the essential part to understand, learn and work with the Node.js
+metadata(configrations,when we created the file,versions,etc.,);
+19-What ExpressJS
+ Express is a node js web application framework that provides broad features
+ for building web and mobile applications. 
+ Express.js is a small framework that works on top of Node.js web server 
+ functionality to simplify its APIs and add helpful new features.
+ It makes it easier to organize your application’s functionality with middleware and routing. 
+ It adds helpful utilities to Node.js HTTP objects and facilitates the rendering
+ of dynamic HTTP objects.
+ 
+ why expressJS
+  It is used to build a single page, multipage, and hybrid web application.
+ It's a layer built on the top of the Node js that helps manage servers and routes.
+  -Develops Node.js web applications quickly and easily.
+  -It’s simple to set up and personalise.
+  -Allows you to define application routes using HTTP methods and URLs.
+  -Includes a number of middleware modules that can be used to execute 
+   additional requests and responses activities.
+  -Simple to interface with a variety of template engines, including Jade, 
+   Vash, and EJS.
+  -Allows you to specify a middleware for handling errors.
+
+difference between  ExpressJS vs node JS?
+ Express adds more features while building apps. Node is just a Javascript environment
+ with libraries to make it easy to write software, whereas Express extends Node 
+specifically to add middleware, routing, and much more.
+ 
+20-ExpressJS Template Engines - PUG, EJS, HBS etc.
+ Pug allows you to write inline JavaScript code in your templates. 
+ There are three types of code: Unbuffered, Buffered, and Unescaped Buffered.
+ unbuffured starts with " - "
+ buffered starts with " = "
+ Unescaped with " != "
+
+21-ExpressJS Express and Middleware
+ -With Express, you can easily create web servers, define routes, handle HTTP 
+ requests and responses,and integrate with various middleware to extend the 
+ functionality of your application. It is widely used in building both simple 
+ APIs and complex, full-fledged web applications.
+-Middleware in Express refers to functions that have access to the request
+ object (req), the response object (res), and the next function in the 
+ application's request-response cycle.
+
+ Express.js Middleware are different types of functions that are invoked by
+ the Express.js routing layer before the final request handler. As the name specified,
+ Middleware appears in the middle between an initial request and final intended route.
+ In stack, middleware functions are always invoked in the order in which they are added.
+
+22-Using Express Generator
+ Express Generator is a Node.js Framework like ExpressJS which is used to create
+ express Applications easily and quickly. It acts as a tool for generating 
+ express applications.
+ -It generates express Applications in one go using only one command.
+ -The generated site has a modular structure that we can modify according 
+  to our needs for our web application.
+ -The generated file structure is easy to understand.
+ -We can also configure options while creating our site like which type of 
+  view we want to use (For example, ejs, pug, and handlebars).
+23-Creating Express Web App
+
+24-Creating RESTFul Service using Express
+
+25-MongoDB	What and Why
+ MongoDB is an open-source document-oriented database that is designed to store 
+ a large scale of data and also allows you to work with that data very 
+ efficiently. It is categorized under the NoSQL (Not only SQL) database because 
+ the storage and retrieval of data in the MongoDB are not in the form of tables.
+
+ why MONGODB:
+ it makes it easy for developers to store, manage, and retrieve data when
+ creating applications with most programming languages.
+
+26-MongoDB Create, Drop Database
+ creating a database:
+ -switch to the db:(use your_database_name)
+ dropping a db:
+ -switch to a diff db(use admin)
+ -drop the db(db.dropDatabase())
+ 
+27-MongoDB Create, Drop Collection
+ create:
+ STEP 1: First run the following command into your mongo shell or command prompt
+ commaand:mongo
+ STEP 2: Check all the existing databases by using the following command:
+ show dbs
+ STEP 3: Creating a database
+ Here we are creating a database named as- geeksforgeeks
+ use geeksforgeeks
+ Drop collection:
+  db.collectionname.drop();
+ 
+28-MongoDB 	Data Types
+ Integer,Boolean,Double,String,Arrays,Date,Object,Symbol,Null,Timestamp
+ Binary Data,Regular Expression
+29-MongoDB Insert, Query, Update and Delete Document
+ INSERT:db.collection.insert() or db.collection.save()
+ ex:db.employee.insert({
+    name:"Atul Rai", email:"atul@example.com", age:28, salary:5000.54})
+ UPDATE:method is used to update the existing document of the collection.
+ ex:db.employee.update({email:"atul@example.com"},{$set:{salary: 8000.99}})
+    WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+ DELETE:To delete a record from the collection uses 
+ db.tablename.remove({criteria}) method.
+ -Delete with condition
+ db.employee.remove({email:"atul@example.com"})WriteResult({ "nRemoved" : 1 })
+ -Delete all records
+  db.employee.remove({})WriteResult({ "nRemoved" : 4 })
+ -Delete/Drop Collection
+  db.employee.drop()
+30-Creating RESTFul Service using Express and MongoDB CRUD Operations
+
+USE STATE:
+ seState is used to manage state within a component, allowing you to store
+ and update data. 
+USE EFFECT:
+ useEffect is used to perform side effects in a component, such as updating
+ the document title, fetching data, or subscribing to events.
+
+LAZY LOADING:
+ Lazy loading is a technique for waiting to load certain parts of a webpage
+ — especially images — until they are needed.
+
+set:Set is a collection of unique values.Each value can only occur once in a Set.
+A Set can hold any value of any data type.
+
+recursiveFunc :
+function calls itself within the body of the function. It will repeat calling 
+itself until the desired output is achieved.
+
+
+
+ 

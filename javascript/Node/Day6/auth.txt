@@ -1,0 +1,119 @@
+JWT-Json web token-header,payload,signature
+-used to share information between two entities, 
+     usually a client (like your app's frontend) and 
+     a server (your app's backend).
+-Authentication is the process of verifying who a user is,
+-Authorization is the process of verifying what they have access to. 
+
+
+
+package.json:
+
+
+/*{
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}*/
+https://blog.logrocket.com/building-microservices-node-js/#microservices-vs
+-monolithic-applications
+----------------------------------------------------------------------------
+nsqlite---
+sqlite is the one the database that is rdbms(not nosql)
+It  is similar to oracle,postgres,sql,ms,sql server.
+import the sqlite module
+hibernate-java
+dotted net have entity framework
+
+----------------------------------------------------------------------
+SQLite usages 
+SQLite is not a client-server database engine. Instead, it is embedded into
+ the application that accesses the database. 
+
+sonarqube----StartSonar.bat
+cd C:\Users\JT75250\Downloads\RESTFulService_with_Mongoose-Mocha_Chai_with_SonarQube
+C:\Users\JT75250\Downloads\sonar-scanner-cli-4.7.0.2747-windows\sonar-scanner-4.7.0.2747-windows\bin\sonar-scanner.bat
+in terminal sonar-scanner.bat
+----------------
+JSX-javascript syntax extension
+JSX as a part of react component 
+2 things -
+babble standalone
+Script text
+module patterns: amd, umd,jsx,
+requirejs-module loader/ loads the module at run time.
+loader which is used with amd 
+when with system module another js file will used that is systemjs
+2 bundlers: browserify-simplest bundler,
+webpack-Treats everything as a module(like css,html)
+-->install packages in react command
+---npx create-react-app hello-react-app-ts --template typescript.
+npx create-react-app my-app
+cd my-app
+npm start
+bundled/bundling file-- merging/transfering files into a single file.
+run React
+1. cd path
+2. npm start
+--it will shows us like starting the development server
+-- and next it will take you to google and opens Learn React
+component info stored in 2 forms that are:
+1.state-what your component gonna contain some kind of info
+2.props-nothing but properties  of state specific to that particular component.
+props - properties
+ Unidirectional Data Flow
+ props are there to hold some information as well as to
+ display(represent) that information.
+ For props generally data / information comming from
+ the parent component.
+props are immutable(cannot modify).
+state is changable.
+always modify the state with setstate()
+Lifecycle Hooks
+--Hooks are functions that let you “hook into” React state and lifecycle features 
+from function components
+run react:
+npx create-react-app my-react-app
+cd my-react-app
+npm start
+---Functional components - recommended
+
+// Benefits
+// Code is easier to read and understand
+// Easy to debug
+// Easy to test - don't have to worry about any hidden state
+// Better in performance - No state, No lifecycle hooks/ methods
+------------------------------------------------------
+Fragment:returns multiple elements
+usecontext
+provider-score
+consumer-display
+---cricketers program
+1. cricketers-routing-app command in terminal(after day3)
+
+--------------------x-----------------------------------------
+Jest:npm test
+
+---------------------------------------
+FLUX--
+Actions - Helper Methods that facilitate passing data to the dispatcher
+Dispatcher - Receives actions and broadcasts payload to registered callback.
+Stores - Containters for application state and logic that have callbacks 
+registered to the dispatcher.
+Controller View / Container Component - React components that grab the 
+state from the Stores and pass it down via props to child components / 
+presentational components
+
+reducer-pure fn
+redux-flux-arch pattern
+redux-single store
+create :npx create-react-app demo_redux --template redux
+
+https://redux-toolkit.js.org/api/createAsyncThunk

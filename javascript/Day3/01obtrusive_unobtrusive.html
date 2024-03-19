@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-size: xx-large;
+            color:peachpuff;
+            background-color: maroon;
+            max-width: max-content;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div><br/>
+    <!-- html - structure and layout
+        javascript - interactivity and behaviour -->
+    <!-- Not a good programming practise to go for Obtrusive javascript -->
+    <!-- Obtrusive javascript - script code written inside html tags -->
+    <!-- <button onclick="getElementById('div1').innerHTML = Date()">Date & Time</button> -->
+    <!-- obtrusive js -->
+    <!-- <button onclick="getDateTime()">Date & Time</button> -->
+    <!-- Simple plain html -->
+    <button id="btnDate">Date & Time</button>
+    <script>
+        // Events
+        // obtrusive javascript and unobstrusive javascript                
+
+        function getDateTime(){
+            console.log('Inside getDateTime!');
+            document.getElementById('div1').innerHTML = Date();
+        }
+
+        // All javascript within the script tag - unobtrusive javascript - recommended
+        document.getElementById('btnDate').onclick = getDateTime;
+    </script>
+</body>
+</html>

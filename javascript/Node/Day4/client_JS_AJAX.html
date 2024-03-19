@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        span {
+            color: peachpuff;
+            background-color: maroon;
+            font-size: xx-large;
+        }
+
+        ul {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        li {
+            font-size: x-large;
+        }
+
+        form {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>List of Books</h1>
+    <ul id='bookList'>
+    </ul><br />
+    ISBN No: <input id="isbnNo" type="text"><br />
+    <button id='btnGet'>Get</button>
+    <button id='btnDelete'>Delete</button><br />
+    <span id='spanBook'></span><br />
+    <form id="bookForm">
+        Name: <input type="text" id='bookName' /><br /> ISBN: <input type="text" id='bookISBN' /><br /> Author: <input
+            type="text" id='bookAuthor' /><br /> Pages: <input type="number" id='bookPages' /><br />
+        <input type="submit" id="btnInsert" value="Insert" />
+        <input type="submit" id="btnModify" value="Modify" />
+    </form>
+    <script>
+        window.onload = loadDoc;
+
+        function getId(id) {
+            return document.getElementById(id);
+        }
+
+        function loadDoc() {
+            
+                function getAllBooks() {
+                    var url = "http://localhost:3300/books";
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (xhttp.readyState === 4 && xhttp.status === 200) {
+                            var jsonArr = JSON.parse(xhttp.responseText);                            
+                            getId('bookList').innerHTML = '';
+                            jsonArr.forEach(function (book) {
+                                var li = document.createElement('li');
+                                li.appendChild(document.createTextNode(
+                                    book.isbn + ' ' + book.name + ' '
+                                    + book.author + ' ' + book.pages));
+                                var ul = getId('bookList');
+                                ul.appendChild(li);
+                            })
+                        }
+                    }
+                    xhttp.open('GET', url, true);
+                    xhttp.send();
+                }
+
+                getAllBooks();
+
+                getId('btnGet').onclick = function () {
+                    var isbn = getId('isbnNo').value;
+                    console.log(isbn);
+                    var url = "http://localhost:3300/books/" + isbn;
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (xhttp.readyState === 4 && xhttp.status === 200) {
+                            var data = JSON.parse(xhttp.responseText);        
+                            console.log(data[0]);                            
+                            getId('spanBook').innerText = data[0].name;
+                        }
+                    }
+                    xhttp.open('GET', url, true);
+                    xhttp.send();
+                }
+
+                getId('btnInsert').onclick = function (event) {
+                    var book = {
+                        name: getId('bookName').value,
+                        isbn: getId('bookISBN').value,
+                        author: getId('bookAuthor').value,
+                        pages: getId('bookPages').value
+                    }
+
+                    var url = "http://localhost:3300/books";
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function ()  {
+                        if (xhttp.readyState === 4 && xhttp.status === 201) {                                                
+                            getId('spanBook').innerText = xhttp.responseText;
+                        }
+                    }
+                    xhttp.open('POST', url, true);
+                    xhttp.setRequestHeader('Content-Type','application/json;charset=utf-8')
+                    xhttp.send(JSON.stringify(book));   
+                    getAllBooks();
+
+                    event.preventDefault();
+                }
+        }
+    </script>
+</body>
+
+</html>

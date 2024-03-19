@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Variable Argument Function
+        /*function getArgs(){
+            document.write('<br/> Inside getArgs!');
+            for(var i in arguments){
+                document.write("<br/>"+arguments[i]);
+            }
+            document.write('<br/>')
+        }
+        function getArgs(n1,n2){
+            document.write('<br/> Inside getArgs with Arguments!');
+            for(var i in arguments){
+                document.write("<br/>"+arguments[i]);
+            }
+            document.write('<br/>')
+        }
+
+        getArgs();
+        getArgs(11,22);
+        getArgs(11,22,"abcd");*/
+        // Javascript doesnt support function overloading
+
+
+        /* // Scope
+        "use strict"
+
+        var g = 9 ; // global variable
+        function foo(){
+            var l = 5; // local variable
+            //var x;
+            //console.log('g '+g+' l '+l);
+            console.log('g '+g+' l '+l+' x '+x);
+            z = 55; // by default it consider as a global variable
+            {
+                //x = 6;
+                var x = 6;// Javascript Hoisting
+                        // Inside a function whenever you declare a local 
+                        // variable using var keyword within the block
+                        // that variable declaration is getting hoisted
+                        // at the begining of the function.
+                        // Local variables with var are always have
+                        // function level scope and not the block level scope
+                //const y = 7;//let y =7; // let variables have block level scope and so
+                            // does the const
+            }
+            //console.log('g '+g+' l '+l+' x '+x);
+            console.log('g '+g+' l '+l+' x '+x+' z '+z);
+            //console.log('g '+g+' l '+l+' x '+x+' y '+y);
+        }
+        foo();
+        //console.log('g '+g+' z '+z);*/
+
+        // Functions can be define in 2 ways
+        // Function Declaration Syntax
+        // Function Expression Syntax
+
+       /* sayHello("Saurav",47);
+
+        // Whenever function definition is written using function declaration syntax
+        // function declaration is getting hoisted at the begining of the file
+        function sayHello(name,age){
+            alert('Name '+name.toUpperCase()+' Age '+age);
+        }
+
+        sayHello("Rahul",46); */
+
+        // Function Expression Syntax - No Javascript Hoisting happens
+
+        //display('Inzy');
+
+        /*var display = function (name){
+            alert('Welcome to Zensar '+name);
+        }
+        display('Singham'); */
+
+        // parseInt and Number
+        document.write("<br/> "+parseInt("123"));
+        document.write("<br/> "+parseInt("123abcd"));
+        document.write("<br/> "+parseInt("a123"));
+        document.write("<br/> "+parseInt("123e-2"));// parsing
+        document.write("<br/> "+Number("123e-2"));// conversion
+        document.write("<br/> "+parseInt("101",10));
+        document.write("<br/> "+parseInt("101",2));
+        document.write("<br/> "+parseInt("101",8));
+        document.write("<br/> "+parseInt("101",16));
+        document.write("<br/> "+parseInt("45.67"));
+        document.write("<br/> "+parseFloat("45.67"))
+        document.write("<br/> "+Number("45.67"));
+
+    </script>
+</body>
+</html>
