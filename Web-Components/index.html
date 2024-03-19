@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie-edge"/> -->
+    <title>Web Components</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html{
+            --color-primary:rgb(101, 196, 252);
+            font-family: sans-serif;
+        }
+        /* div{
+            border: 2px solid orange;
+        } */
+        /* uc-tooltip{
+            border: 1px solid blue;
+            padding: 0.15rem;
+        } */
+        /* uc-tooltip.important{
+            background-color: green;
+            color: black;
+        } */
+        .highlight{
+            /* background-color: #f7d28e; */
+            /* border-bottom: 2px solid blue; */
+        }
+    </style>
+    <script src="tooltip.js"></script>
+    <script src="confirm-link.js"></script>
+</head>
+<body>
+    <template id="tooltip-template">
+    </template>
+    <!-- when we want to style inside a para then :host-context  -->
+    <p>
+        <uc-tooltip class="important" text="web Components is a set of standards."> 
+    <span class="highlight"> web Components</span>
+    </uc-tooltip> 
+        are awesome!
+    </p>
+
+    <uc-tooltip></uc-tooltip>
+    <!-- <p></p><zns-tooltip>weeb <button>Components</button></zns-tooltip>are awesome! </p> -->
+    <!-- <div>This does not get the web Component styles!</div> -->
+    <a is="uc-confirm-link" href="https://www.google.com/">Google</a>
+</body>
+</html>

@@ -1,0 +1,36 @@
+1. what is web-components
+  write comp that we can use and 
+  we can re-user and 
+  where we also encapsulate all our logic
+2.why web-components?
+ -encapsualte logic+ UI
+    easy to undertsand
+    easy to maintain
+    separation of concerns
+ -re-usable across page
+    use it just like nrml html ele
+    no worry about overlapping logic
+    write logic+UI only once
+ -re-usable between apps/projects
+    use it just like nrml html ele
+    re-use core UI elements accross projects
+    write logic + UI only once
+
+3.
+if we want to style any slotted content(slot) then we have to use 
+::slotted()//ex:::slotted(div),::slotted(span),::slotted(a),etc.,
+3. what is stencil?
+   -it is not a js framework like angular and it is not a library like react.
+   -it is a tool that runs on our machine which we will never deploy(pushing changes from one evn to another)
+      to a website that is in the web.
+   -it is just a tool on machine.(like photoshop)
+   -A complier for Native Web Components.
+   -stencil.js gives us a way nicer syntax and a lot of convenience features which we can use to write 
+      web components in a more convenient and error safe way using Javascript and also Typescript.
+
+4-what is Typescript?
+   -superset of js
+   -it will add some extra features to the js lang, ex:-decorators
+   -it is strictly typed lang.
+      ex:a:number=5;//Typescript
+      ex:a=5;//Javascript
