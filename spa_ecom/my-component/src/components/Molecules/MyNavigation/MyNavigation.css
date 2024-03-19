@@ -1,0 +1,14 @@
+ .Header-Content {
+    display: flex;
+    font-size: 1rem;
+    font-weight: bold;
+    gap: 5rem;
+    align-items: center;
+    cursor: pointer;
+  } 
+  
+.Header-Content me-auto{
+      /* gap:3.5rem; */
+      color: gray;
+      margin-right: 3.5rem;
+  }

@@ -1,0 +1,13 @@
+/* .add-to-cart-btn{
+    display: inline;
+    position: absolute;
+     /* bottom: 0px; }*/ 
+
+/* :host {
+    display: block;
+  } */
+  button-color{
+    background-color: blue;
+    color: white;
+  }
+  

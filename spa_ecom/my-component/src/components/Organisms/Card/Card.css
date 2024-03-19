@@ -1,0 +1,51 @@
+.homepage-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust based on your preferred min-width */
+  gap: 20px;
+  padding: 20px;
+ }
+
+ .card{
+  border:1px solid grey;
+  padding:3px;
+  position:relative;
+  background: white;
+  box-shadow:0 2px 3px black
+ }
+
+ .heart-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  /* Add size, color, or other styles as needed */
+ }
+ .card-image {
+  width: 100%;
+  height: auto;
+ }
+ .card-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto; /* Pushes this section to the bottom */
+ }
+ .card-name{
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding-left: 7rem;
+ }
+
+ .card-price {
+  font-size: 1.2em;
+  font-weight: bold;
+ }
+ .card-price {
+  font-size: 1.3rem;
+  color: #333;
+ }
+ /* .card-rating{
+  margin-top: 10px;
+  padding-left: 6.2rem;
+
+ } */

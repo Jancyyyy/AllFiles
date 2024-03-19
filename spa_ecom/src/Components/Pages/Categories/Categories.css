@@ -1,0 +1,18 @@
+/* .image-style{
+    display: "flex";
+    flex-wrap: wrap;
+}
+.message-style{
+    width: "10px";
+    size: 10px;
+    height: "10px";
+    margin-bottom: "10px";
+} */
+.image-content{
+    display: "flex";
+    justify-content: center;
+    flex-Wrap: "wrap";
+    font-Weight:"bold" 
+}
+/* style={{ textAlign: "center", margin: "20px" }} */
+/* style={{ width: "100px", height: "100px", marginBottom: "10px" }} */

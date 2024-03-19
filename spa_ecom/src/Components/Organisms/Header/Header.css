@@ -1,0 +1,43 @@
+/* flex justify-between items-center h-14 py-4 border border-b-1 */
+.nav-class{
+  background-color: black;
+  color: white;
+}
+.me-auto{
+  color: white;
+}
+.header-border {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.5rem;
+  padding: 1rem;
+  border-bottom-width: 1px;
+}
+/* font-bold text-xl */
+.header-name {
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.header-image {
+  width: 3.5rem;
+  height: 3rem;
+}
+/* flex text-base font-semibold space-x-14 items-center cursor-pointer */
+.Header-text {
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.75rem;
+  color: white;
+
+}
+.Header-Content {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  gap: 3.5rem;
+  align-items: center;
+  cursor: pointer;
+
+}
