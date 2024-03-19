@@ -1,0 +1,39 @@
+STORYBOOK:it is a open source rool for building ,testing and showcasing Ui comps in isolation.
+test the comp independently.
+A development environment and playground for UI components.
+create components independently
+showcase those comp interactively in an isolated development environment.
+it runs outside of react application.
+storybook runs outside of our main react application so we can develop ui comp's 
+in isolation without having to worry about business logic.
+-storybook follows a format called CSF(COMP STORY FORMAT)
+-Storybook allows developers to build and test UI components in isolation, 
+meaning that they can work on each component individually, without affecting 
+the rest of the application. This not only speeds up development but also 
+ensures that each component works as intended, making it easier to identify
+and fix issues.
+
+WHY BUTTON.JS AND BUTTON.STORIES.JS
+    BUTTON.JS:
+            :this files contains actual react comp logic(BUTTON example)
+            :it combines the logic ,behaviour and structure of button comp.
+    BUTTON.STORIES.JS: 
+            :this file is specially for storybook.
+            :it contains stories that shows in our comp.
+            :It helps the developers to maintain a clear separation btw stories.       
+
+REPLACEMENT OF STORYBOOK
+    Styleguidlist
+    Docz:focuses on creating rich and beautiful documentation for comps.
+    Bit
+
+stories:collection of variations for a comp.
+addons:extensible features like backgrounds,actions.
+configuration:'storybook' directory and configuration files.
+
+FUNCTIONAL COMP:
+    Functional components take props as input and return a React element that 
+    describes what should be rendered on the screen. 
+CLASS COMP:
+    A class component requires you to extend from React. 
+    Component and create a render function that returns a React element.
