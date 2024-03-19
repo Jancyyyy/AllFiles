@@ -1,0 +1,110 @@
+           body{
+            background-color:rgb(42, 74, 75);
+        }
+        .accordion li{
+            list-style: none;
+            /* width:100%; */
+            /* margin-bottom: 10px; */
+            background-color:rgb(230, 218, 218);
+            padding: 10px;
+            border-radius: 4px;
+            margin: 1px auto;
+            width: 400px;
+
+        } 
+        .accordion li label{
+        padding: 10px;
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+        font-size: 18px;
+        font-weight: bold;
+        /* font-weight: 500; */
+        cursor: pointer;
+        color: brown;
+        }
+        .accordion li label span{
+            transform: rotate(90deg);
+            font-size: 20px;
+            color: #333;
+        }
+        .accordion .content{
+            padding: 0 10px;
+            line-height: 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition:0.5s;
+        }
+        .accordion label+input[type="radio"]:checked +.content{
+            max-height: 300px;
+        }
+
+
+
+
+/* <!DOCTYPE html>
+           <html lang="en">
+           <head>
+               <meta charset="UTF-8">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title>Simple Table with Sorting and Searching</title>
+               <style>
+                   table {
+                       border-collapse: collapse;
+                       width: 100%;
+                       margin-bottom: 20px;
+                   }
+            
+                   th, td {
+                       border: 1px solid #ddd;
+                       padding: 8px;
+                       text-align: left;
+                   }
+            
+                   th {
+                       background-color: #f2f2f2;
+                   }
+            
+                   Style for search input
+                   #searchInput {
+                       margin-bottom: 10px;
+                       padding: 8px;
+                   }
+               </style>
+           </head>
+           <body>
+            
+               <!-- Search Input -->
+               <input type="text" id="searchInput" placeholder="Search by Name">
+            
+               <!-- Table with Sorting -->
+               <table>
+                   <thead>
+                       <tr>
+                           <th>ID</th>
+                           <th>Name</th>
+                           <th>Age</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       <tr>
+                           <td>1</td>
+                           <td>John Doe</td>
+                           <td>25</td>
+                       </tr>
+                       <tr>
+                           <td>2</td>
+                           <td>Jane Doe</td>
+                           <td>30</td>
+                       </tr>
+                       <tr>
+                           <td>3</td>
+                           <td>Bob Smith</td>
+                           <td>22</td>
+                       </tr>
+                       <!-- Add more rows as needed -->
+                   </tbody>
+               </table>
+            
+           </body>
+           </html> */

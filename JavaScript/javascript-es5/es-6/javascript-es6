@@ -1,0 +1,28 @@
+1--Destructuring is an efficient way to extract multiple values from data 
+that is stored in arrays or objects.
+
+2--The map. set() method is used to add key-value pairs to a Map object.
+ It can also be used to update the value of an existing key. Each value 
+ must have a unique key so that they get mapped correctly.
+
+Maps, the data is stored as a key-value pair
+Sets, data is a single collection of values that are unique
+
+3--Generator which can stop midway and then continue from where it stopped.
+They can create iterable objects. they can be paused and resumed at any point.
+-is a function that produces or yields a sequence of values using a yield statement
+-Iterators are the objects that use the next() method to get the next value 
+ of the sequence.
+
+ http://es6-features.org/#ObjectMatchingShorthandNotation
+
+
+
+
+ Async keyword is used along with the function declaration which specifies that this function is now able to accept all types of asynchronous events on itself.
+In other words, the async keyword is used along with functions (or methods) which enables them to receive all types of asynchronous data easily.
+Async keyword usage along with the functions always returns a promise at the end along with its state (pending or resolved or rejected).
+Await is used inside the async function which is though useful for the waiting purpose of the result.
+Await basically waits for the results which are particularly to be fetched from the source from which that async function is about to fetch the data.
+Await takes a little time to fetch the results from the source (like API) and thereafter along with the async function returns the result in the form of a promise.
+Await can also be used if Async is used along with the function declaration.

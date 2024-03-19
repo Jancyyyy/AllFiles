@@ -1,0 +1,2 @@
+object: collection of properties(it is an association btw a name and a value)
+classes: classes are a template for creating objects.

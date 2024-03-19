@@ -1,0 +1,75 @@
+1.Reactjs-A client-side js library.
+2.this:-refering current object
+function component-there will be no rendering only returning will be there.
+STATE-PROPS:
+PROPS:if we want to send data from outside to a component
+STATE:creating the data inside the comp and manuplate and show in comp.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.what is react?(developed by FB)
+ it is also know as reactjs.it is a free and open source front-end js library for
+ building user interfaces based on components.
+2.Major features of react?
+ server side rendering.
+ it uses virtual DOM instead of real DOM
+ databinding-unidirectional data flow.
+ jsx-jsxml,it is an js syntax extension.
+ performance-
+ virtual dom-creates the virtual copy of the original DOM object.
+ debugging-debugging code
+ component-based-
+3.What is JSX? 
+ XML-extensible markup language.
+ JSX stands for JavaScript XML. JSX allows us to write HTML in React. JSX makes it 
+ easier to write and add HTML in React.
+4.

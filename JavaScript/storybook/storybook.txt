@@ -1,0 +1,10 @@
+It is a tool or playground in which we can develop comp in isolation.
+It is a open source tool.
+it is used to build test and visualize ui components in isolation.
+---------------------------------------------------------------
+A development environment and playground for UI components.
+create components independently
+showcase those comp interactively in an isolated development environment.
+it runs outside of react application.
+storybook runs outside of our main react application so we can develop ui comp's 
+in isolation without having to worry about business logic.

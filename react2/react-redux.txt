@@ -1,0 +1,509 @@
+1--Destructuring is an efficient way to extract multiple values from data 
+that is stored in arrays or objects.
+
+2--The map. set() method is used to add key-value pairs to a Map object.
+ It can also be used to update the value of an existing key. Each value 
+ must have a unique key so that they get mapped correctly.
+
+Maps, the data is stored as a key-value pair
+Sets, data is a single collection of values that are unique
+
+3--Generator which can stop midway and then continue from where it stopped.
+They can create iterable objects. they can be paused and resumed at any point.
+-is a function that produces or yields a sequence of values using a yield statement
+-Iterators are the objects that use the next() method to get the next value 
+ of the sequence.
+//-------------------------------------------------------------------------------------------------------
+REDUX:https://blog.devgenius.io/understanding-the-concept-of-redux-5a50acfe38d
+
+1-what is react
+ it is a front-end js library developed by fb in 2011.
+ it is used to developing complex and interactive web and mobile UI.
+ it is js library for building user interfaces or UI components.
+ it is widely used for creating single-page applications. 
+
+2- features of react
+ it uses the virtual DOM instead of the real DOM.
+ it uses serve-side rendering
+ it follows uni-directional data flow or data binding.
+ (You can only transfer data from parent to child and not vice versa.)
+
+3-Major advantages of react
+ it uses the virtual DOM instead of the real DOM.
+ it follows a unidirectional data flow, which means that data flows in one direction- 
+  from parent to child components.
+ it increases aplplication's performance
+ it can be conviently used on the client as well as server side.
+ Beacuse of jsx code's readability increases.
+
+4-Limitations of react
+ it is just a library, not a full developed framework
+ this library is very large and takes time to understand.
+ it can be little diffcult for the novice(beginners) programmers to understand.
+ coding gets complex as it uses inline templating and JSX
+
+5-what is JSX(JAVASCRIPT XML)
+ It is a syntax extension used in react to describe what the UI should look like.
+ it allows us to write XML or HTML like code directly within our js files.
+ it makes the code more readable.
+
+6- what is virtual DOM
+ This is called reconciliation.
+ Virtual Document Object Model is used in react to optimize the updating of the actual DOM.
+ React creates a VIRTUAL DOM in memory.
+ Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory,
+  where it does all the necessary manipulating, before making the changes in the browser DOM.
+  React only changes what needs to be changed!
+Its Working- The virtual DOM works in 3 steps
+ 1.whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM 
+   respresentation.
+ 2.Then the diff between the previous DOM representation and the new one is calculated.
+ 3.Once the calculations are done, the real DOM will be updated with only the things 
+   that have actually changed.
+
+7- why can't browsers read JSX?
+ JSX isn't directly supported by browsers, requiring conversion by tools like Babel to 
+ transform JSX into valid JavaScript.
+
+8- How is react different from Angular?
+                    REACT                                        ANGULAR
+ ARCHITECTURE- only the view of MVC                        Complete MVC(Model View Controller)
+ RENDERING   - server-side rendering                       Client-side rendering
+ LANGUAGE    - Uses JSX                                    Uses Typescript
+ DOM         - uses virtual DOM                            Uses real DOM
+ DATABINDING - one way data binding                        Two- way data binding
+ DEBUGGING   - complie-time debugging                      run-time debugging
+ AUTHOR      - facebook                                    Google
+ 
+9-What do you understand from "in react , everything is a component"?
+ components are the building blocks of a react application's UI. These components split 
+ the entire UI into small independent and reuseable pieces.Then it renders each of 
+ these components independent of each other without affecting the rest of the UI.
+
+10- render() in react.
+ it is part of a class comp.
+ its where the comp describes what should be displayed on the UI.
+ This method is mandatory for class comp, and it must return a react element 
+ which is representation of native DOM comp.
+ if more than one HTML element needs to be rendered, then they must be grouped
+ together inside one enclosing tag such as
+ <FORM>, <GROUP>, <DIV>.
+
+https://refine.dev/blog/react-props/
+/// Components in React are JavaScript functions and ES6 classes. 
+///The arguments we pass to functions are now "props" in React Components.
+
+11- what is props?
+ props are there to hold some info as well as to display that info.
+ for props generally data/info coming from the parent comp.
+ props are read-only components.
+ Props are immutable, which means that they cannot be modified.
+ Once a props is passed to a component, that component cannot change the value of the props.
+ Props are used for communication uni-directional.
+
+12-what is state and how it is used?
+ Like props state also holds information about the component but the kind of info 
+ and how do you handle it that is gng to be diff than props.
+ State is not passed from one component to the other, it is passed within the comp
+ only. 
+ State is mutable. states can be changed at will in the comp.
+ state are read-and-write components.
+ states are the objects which contain data or info about comp.
+ They are accessed through this.state()
+
+13-what is arrow functions and how it is used?
+ It is concise way to write anonymous function expressions.
+ They also called as "fatArrow"(=>)the functions.
+ Anonymous func'n that doesn't return any value
+ It can be declared without function keyword
+ Reduce the size of the code---|
+ Makes code more readable------|  Advantages
+ Arrow functions reduce the size of the code. The return statement and function 
+ brackets are optional for single-line functions. 
+ It increases the readability of the code.
+Uses-
+ These are mostly useful while working with higher order function(
+ functions that return one or multiple components, depending on array data.
+ ex:map,filter) 
+
+14-
+ STATEFUL COMP                                    STATELESS COMP
+ also known as class comp                       also known as functional comp
+ Have a local state and can hold and manage     do not have local state
+   local state
+ It can use lifecycle methods(compDidMount,     Cannot use lifecycle methods
+ compDidUpdate, compWillUnmount)
+ It is used when a comp needs to maintain       It is used for presentational comp
+ and manage its own state                       that are solely responsible 
+								for displaying info.
+ 
+13-  different phasesof react comp life cycle ?
+ 
+Initial Rendering phase(Mountinng phase):-
+ These methods are called when an instance of a component is being created 
+ and inserted into the DOM.
+ This is the phase when the comp is about to start its life journey and make its 
+ way to the DOM.
+Updating phase:-
+ These methods are called when a component is being re-rendered as a result 
+ of changes to either its props or state.
+ Once the comp gets added to the DOM,It can potentially update and rerender
+ only when a prop or state changes occur.
+Unomunting phase:- 
+ This method is called when a component is being removed from the DOM.
+ This is the final phase of comp lifecycle in which comp is removed or 
+ destroyed from the DOM.
+
+14-Explain the lifecycle methods of React comp:
+ ComponentWillMount():excute just before rendering takes place on both sever and 
+  client sides.
+ ComponentDidMount():excute on the client side only after the first render.
+ CompWillRecieveprops():invoked(to call on) as soon as the props are recieved 
+  from the parent class and before another render is called.
+ ShouldcompUpdate():returns true or flase based on the conditions. if we want 
+  comp to update returns true else false. by default, it returns false.
+ CompWillUpdate():called before rendering takes place in DOM.
+ CompDidUpdate():called immediately after rendering takes place.
+ CompWillUnmount():called after the comp is unmounted from DOM.it is used to 
+  clear up the memory spaces.
+
+15-what is an event
+ An event is an action that occurs as per the user's instruction 
+ as input and gives the output in response
+ 
+16-how do you modularize code in react
+ We can modularize code by using the export and import properties.
+ They help in writing the comp separately in different files.
+
+17-what are synthentic events in react
+ Synthetic events are the obj which act as a cross-browser wrapper.
+ They combine the behaviour of diff browsers into one API.
+ This is done to make sure that the events show consistent props across 
+ diff browsers
+ Eg:onclick,onSubmit
+ They are called "synthentic "bcoz they provide a consistent interface for 
+ handling events across diff browsers.
+
+18-what do you understand by refs in react
+ Refs is the short hand for references in React. Refs are a function provided 
+  by React to access the DOM element and the React element that you might 
+  have created on your own. They are used in cases where we want to change 
+  the value of a child component, without making use of props and all. 
+  They have wide functionality as we can use callbacks
+ refs (short for references) provide a way to interact with the DOM or
+ to reference a React component. Refs are commonly used to:
+ Accessing the DOM:
+ Accessing react components:
+ There are two types of refs in React: string refs (legacy) 
+ and callback refs (modern).
+
+19-List some of the cases when you should use Refs
+ Acessing the DOM directly
+ Integrating with third-party libraries.
+ Managing focus and selection.
+ Interacting with class comp
+
+20-How are forms created in React?
+ In React, creating forms involves using the <form> element and various 
+ form-related elements like <input>, <textarea>, and <select>. 
+ React components manage the form state and handle form submissions through 
+ controlled components, where the form elements receive their values and event 
+ handlers via props.
+ In React, forms are created using the HTML <form> element and React components 
+ that handle user input. React provides a way to manage form state, 
+ validate user input, and handle form submission.
+
+21.What are higher order components(HOC)?
+ It is a way to reuse the comp logic and share it between diff comp's.
+ It is a func that takes a comp and returns a new comp.
+ This can involve adding new props, intercepting lifecycle methods, 
+ or managing state.
+
+22.What can you do with HOC?
+ Authentication and Authorization
+ Code Reuse
+ State Abstraction and manipulation
+ props Manipulation
+
+23.What are pure components
+ React pure components are the components that do not re-render when the 
+ value of props and state has been updated with the same values.
+ Since these components do not cause re-rendering when the same values are 
+ passed thus they improve performance.
+
+24.What were the major probs of MVC framework?
+ DOM manipulation is expensive
+ Apps are slow and inefficient
+ Huge memory wastage
+ Complicated models due to circular dependencies
+
+25.Explain FLUX
+  flux is an architecture.
+  store and change logic are separate.
+  4 comps;-ACTION,DISPACTHER,STORE,VIEW.
+  flux can have multiple stores in one application
+  state is mutable.
+  Flux has multiple stores and a central dispatcher to manage communication to
+  those stores.
+ ACTION,DISPATCH,STORE,VIEW
+
+26.What is Redux?
+ Redux is a pattern and library for managing and updating application state, using
+ events called "actions".
+ It serves as a centralized store for state that needs to be used accross entire
+  application.
+ Redux uses a single store
+ Redux keeps state information in one place of the application.
+ Redux only has one store and encourages using simple reducer functions to interact
+  with various properties on the store
+ Redux follows a unidirectional data flow pattern, making it easier to understand
+ and debug complex state management scenarios.
+ STORE,ACTION,REDUCER,DISPATCH,MIDDLEWARE
+
+27.What are the three principles that Redux Follows?
+ i.Single source of truth:
+  The state of the whole application is stored in an object tree within a single store.
+ ii.state is read-only:
+  The only way to change the state is to emit an action, an object describing what happened.
+ iii.changes are made with pure functions:
+  To specify how the state tree is transformed by actions, you write pure reducers.
+  The only place to manipulate data in Redux is the reducer functions. As the reducers are
+  pure functions, they don’t manipulate the existing data. Instead, they create a new 
+  instance of the data with the required changes.
+
+28.What do you understand by Single source of truth?
+ The state of your whole application is stored in an object tree within a single store. 
+ so, all the comp's state is stored in the store and they receive updates from 
+ the store itself.
+ 
+29.Components Of Redux?
+ Action:Its an object that describes what happened. 
+   It always has a type field that describes the action we want to perform
+ Reducer:It is a place to determine how the state will change
+ Store: state is the entire application is stored in the one place
+ View:It simply displays the data provided by the store.
+
+30.Role of reducer
+ Reducers are pure functions a function that specify how the state should change in response 
+ to an action.
+ They take the current state and an action as arguments and return a new state.
+ Reducers should be pure functions without side effects.
+ PURE FUNCTION:Is a function (a block of code) that always returns 
+ the same result if the same arguments are passed.It does not depend on any
+ state or data change during a program's execution.it only depends on its i/p
+ arguments
+
+31.How are Actions defined in Redux.
+ Indicates type of action being performed
+ They must be Defined as a string const and you can add more props to it.
+ Actions are created using functions called Action Creators.
+ Created using functions called Action Creators
+
+32.significance of store in redux
+ state is the entire application is stored in the one place
+
+33.How redux is diff from flux
+ REDUX:
+  redux is a js library
+  store contain state and change logic.
+  it has two comp :-ACTION CREATOR, STORE-REDUCER,STATE
+  redux can have only one global store in one application.
+  state is immutated.
+  Redux only has one store and encourages using simple reducer functions to 
+  interact with various properties on the store.
+  
+ FLUX:
+  flux is an architecture.
+  store and change logic are separate.
+  4 comps;-ACTION,DISPACTHER,STORE,VIEW.
+  flux can have multiple stores in one application
+  state is mutable.
+  Flux has multiple stores and a central dispatcher to manage communication to
+  those stores.
+
+34.Adv of Redux
+ server-side rendering
+ Middleware support
+ Easy testing
+ centralized storage
+ easier debugging
+ 
+35.React Router
+ React Router is a popular library for handling routing in React applications.
+ It is used for developing single page web applications with multiple views or pages.
+ It has a simple API
+
+36.Switch keyword used in React Router
+ The <Switch> component is used to render components only when the path will be 
+ matched. Otherwise, it returns to the not found component.
+ -URL are defined in sequentially pattern
+ -that helps to control the rendering of routes 
+  and prevents multiple matches from being rendered simultaneously
+
+37.Need of router in React
+ Router is mainly used for developing Single Page Web Applications. 
+ React Router is used to define multiple routes in the application.
+ When a user types a specific URL into the browser, and if this URL path 
+ matches any 'route' inside the router file, the user will be redirected to 
+ that particular route.
+
+38.adv of React Router
+ Server-side rendering
+ Dynamic routing
+ Flexibility
+
+39.Stateless Comp
+ stateless component" or "functional component" usually refers to a component 
+ that doesn't have its own state and doesn't manage lifecycle methods. 
+ Instead, it receives data and functions via props and focuses solely on 
+ presenting
+ BENEFITS
+ Code is easier to read and understand
+ Easy to debug
+ Easy to test - don't have to worry about any hidden state
+ Better in performance - No state, No lifecycle hooks/ methods
+ STATEFUL COMP:
+ These components have the ability to manage their own internal state, 
+ handle lifecycle methods, and perform various actions in response to user 
+ interactions or other events.
+								
+40.React diff from Angular and VUE js 
+
+//Virtual DOM: It creates a copy of the entire DOM in the memory. 
+//Shadow DOM: It does not create a complete representation of the entire DOM. 
+//It adds subtrees of DOM elements into the document instead of adding them 
+//to the main DOM tree.
+
+41-why to use reactjs
+ React is flexible
+ Performance
+ Easy to learn
+ Reusable components
+ one-way data binding
+ virtuaL DOM
+ Unidirectinal data flow
+ Flexibility
+
+42.Diff between controlled and uncontrolled comp
+ A controlled component is driven by props handed down 
+ from its parent component. This enables the parent component to fully 
+ specify the child component's behavior.
+ An uncontrolled component manages its own local state and does not rely 
+ on props to update its values
+
+43.what is container comp?
+ It is a type of comp that focuses on managing state,handiling logic and 
+ interacting with data sources.
+ container comps are responsible for fetching and managing data and as
+ well as passing down the necessary info to presentational comp.
+
+44.what are selectors? why would you reselect or a memoization library?
+ selectors are functions that take state and return a portion of it while
+ applying calculations,transformations,mapping etc.In this way the data is 
+ encapsulated.Since the operations are expensive as they will return the 
+ same results and hence the usage of reselect. Reselect will return the 
+ results from the cache in case arg didn't change.
+
+45.what are approaches of handling side effects in redux?
+ It manages asynchronous operations, such as data fetching, and interacting 
+ with external APIs.
+ Side effects are mostly async calls and are handled by redux thunks or redux-saga
+ Thunks:
+ Are functions that can be dispatched as actions in Redux. With the help of the
+ redux-thunk middleware, thunks have access to the dispatch and getState functions
+ redux-saga:
+ is a middleware for handling side effects in Redux using generator functions.
+
+46.what are actions and action creators?
+ ACTION:object that describes what happened.
+  It always has a type field that describes the action we want to perform
+ ACTION CREATOR:Actions are created using functions called Action Creators.
+
+47.how could you optmize the performance of a react application?
+-By using pure component
+-Using memoization reselect
+-Reducing number of re renders
+-Reducing the size of js file
+-Using dynamic inputs and chunks
+ 
+48.Do you know what the reconciliation alogorithm is?
+ Renconciliation algorithm compares the prev virtual dom with the new one and 
+ determines the best way to update the real dom
+ 
+49.Do you know the context API?
+ It is js library for building user interfaces.
+ is a way to manage and share state(data) btw diff comps without having to pass
+ the data through each level of the comp.
+ Its like creating a global store of data comps can tap into when they need it.
+
+50.How do you handle method binding in components?
+ Arrow functions.
+
+51- what are new features in react 16+?
+ error broundaries
+ refs,
+ hooks,
+ react.memo
+
+52-stateful comp
+ These components have the ability to manage their own internal state, 
+ handle lifecycle methods, and perform various actions in response to user 
+ interactions or other events.
+
+
+----------------------------------------------------------------------------------------------------
+
+1.USEPARAMS HOOKS:
+  It returns an object of key/value pairs of the dynamic params from the current 
+  URL that were matched by the <Route path>.
+
+2.USENAVIGATE:
+ hook returns a function that lets you navigate programatically / imperatively.
+
+3.SHALLOW: 
+ Useful constraint to test component as a unit, to ensure that your tests are 
+ not directly or indirectly asserting on the behaviour of the child component.
+
+4.CURRYING FUNCTION:
+  Currying is the technique of evaluating function with multiple
+  arguments to sequence of functions with single argument.
+
+5.Immer library-iny package that allows you to work 
+   with immutable state in a more convenient way.
+   Redux Toolkit allows us to write "mutating" logic 
+   in reducers. It doesn't actually mutate the state 
+   because it uses the Immer library, which detects 
+   changes to a "draft state" and produces a brand 
+   new immutable state based off those changes
+6.redux-toolkit - set of standard mechanism to use the things.
+
+7.USE CALLBACK:
+ It is used to memoize functions, particularly callback functions, in order to 
+ optimize performance. Memoization involves caching the result of a function so 
+ that if the function is called with the same arguments again, the cached result
+ is returned instead of recomputing the result
+ USES:
+ useCallback can be particularly useful in scenarios where you pass callback 
+ functions as props to child components. Memoizing the callback prevents 
+ unnecessary re-renders of those child components when the parent component 
+ re-renders.
+
+8.USEMEMO:
+ useMemo is a hook in React that is used for memoization.
+ Memoization is an optimization technique where the result of a function is 
+ cached and returned when the same inputs occur again.
+
+9.EQUALITY OPERATOR:(==)
+ it compares only value of the operands.
+ console.log(1=='1');//true
+ console.log(true=='1');//true
+
+10.STRICT EQUALITY OPERATOR:(===):
+ it compares both the values and types of the operands.
+  console.log(1==='1');//false
+  console.log(1==='1');//false
+
+11.what is data mutation?
+ The process of changing or modifying the values of data in place.
+ It involves modifying the state or content of variables ,objects,arrays or 
+ other data structures.

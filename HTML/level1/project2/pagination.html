@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagination Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+ 
+    .pagination {
+      display: flex;
+      list-style: none;
+      padding: 0;
+    }
+ 
+    .pagination li {
+      margin-right: 10px;
+    }
+ 
+    .pagination a {
+      text-decoration: none;
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      color: #333;
+    }
+ 
+    .pagination a:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+ 
+  <h1>Page Content</h1>
+ 
+  <!-- Example content for demonstration purposes -->
+  <div id="content">
+    <p>Page 1 Content</p>
+  </div>
+ 
+  <!-- Pagination -->
+  <ul class="pagination" id="pagination">
+    <li><a href="#" onclick="prevPage()">Previous</a></li>
+    <li><a href="#" onclick="changePage(1)">1</a></li>
+    <li><a href="#" onclick="changePage(2)">2</a></li>
+    <li><a href="#" onclick="changePage(3)">3</a></li>
+    <!-- Add more pages as needed -->
+    <li><a href="#" onclick="nextPage()">Next</a></li>
+  </ul>
+ 
+  <script>
+    let currentPage = 1;
+ 
+    function changePage(pageNumber) {
+      // Update the content based on the selected page
+      document.getElementById('content').innerHTML = `<p>Page ${pageNumber} Content</p>`;
+      currentPage = pageNumber;
+      updatePagination();
+    }
+ 
+    function nextPage() {
+      // Increment the current page and update the content
+      currentPage++;
+      document.getElementById('content').innerHTML = `<p>Page ${currentPage} Content</p>`;
+      updatePagination();
+    }
+ 
+    function prevPage() {
+      // Decrement the current page (if not already on the first page) and update the content
+      if (currentPage > 1) {
+        currentPage--;
+        document.getElementById('content').innerHTML = `<p>Page ${currentPage} Content</p>`;
+        updatePagination();
+      }
+    }
+ 
+    // function updatePagination() {
+    //   // Update the pagination links to reflect the current page
+    //   const paginationLinks = document.getElementById('pagination').querySelectorAll('a');
+    //   paginationLinks.forEach(link => link.classList.remove('active'));
+    //   paginationLinks[currentPage].classList.add('active');
+    // }
+  </script>
+ 
+</body>
+</html>

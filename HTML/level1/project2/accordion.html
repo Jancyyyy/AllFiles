@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ACCORDION</title>
+        <link rel="stylesheet"  href="accordion.css">
+        <style>
+            body{
+                background-color:rgb(42, 74, 75);
+            }
+            /* .accordion ul{
+                margin: 100px auto;
+                width: 400px;
+                text-align: center;
+                align-items: center;
+            } */
+            .accordion li{
+                list-style: none;
+                /* width:100%; */
+                /* margin-bottom: 10px; */
+                background-color:rgb(230, 218, 218);
+                padding: 10px;
+                border-radius: 4px;
+                margin: 6px auto;
+                width: 400px;
+
+            } 
+            .accordion li label{
+            padding: 10px;
+            display: flex;
+            align-items:center;
+            justify-content: space-between;
+            font-size: 18px;
+            font-weight: bold;
+            /* font-weight: 500; */
+            cursor: pointer;
+            color: brown;
+            }
+            .accordion li label span{
+                transform: rotate(90deg);
+                font-size: 20px;
+                color: #333;
+            }
+            .accordion .content{
+                padding: 0 10px;
+                line-height: 20px;
+                max-height: 0;
+                overflow: hidden;
+                transition:0.5s;
+            }
+            .accordion label+input[type="radio"]:checked +.content{
+                max-height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="accordion" > 
+            <li>
+                <label for="first">What is HTML?<span>&#x3e;</span></label>
+                <input type="radio" name="accordion" id="first" checked>
+                <div class="content">
+                    <p>HTML stands for Hyper Text Markup Language. 
+                        HTML is the standard markup language for creating Web pages.
+                        HTML describes the structure of a Web page.
+                        HTML consists of a series of elements.
+                        HTML elements tell the browser how to display the content.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="second">What is Structure?<span>&#x3e;</span></label>
+                <input type="radio" name="accordion" id="second" >
+                <div class="content">
+                    The two primary structural components in HTML are the 
+                    body and the head. Both of these are used by all web 
+                    browsers to render the structure and settings of a webpage.
+                </div>
+            </li>
+            <li>
+                <label for="third">What are the types of CSS in html?<span>&#x3e;</span></label>
+                <input type="radio" name="accordion" id="third" >
+                <div class="content">
+                <p>
+                    There are three types of CSS: external, internal, and inline. 
+                    External CSS commands are written in a separate file from the 
+                    main HTML page. These are thenf linked to each web page by a 
+                    command in the HTML file.
+                </p>
+            </div>
+            </li>
+        </ul>
+    </body>
+</html>

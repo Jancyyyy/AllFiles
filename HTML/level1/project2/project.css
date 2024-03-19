@@ -1,0 +1,28 @@
+/* style{
+    .body{
+        background-color: beige;
+    };
+    .header{
+        align-items: center;
+    };
+    .nav{
+        background-color: black;
+        overflow: hidden;
+    }
+    .a{
+        color: whitesmoke;
+        font-size: 25px;
+        padding: 14px 70px;
+    };
+    .h1{
+        background-color: lightseagreen;
+        text-align: center;
+        overflow: hidden;
+        font-size: 40px;
+    };
+    .section{
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+} */

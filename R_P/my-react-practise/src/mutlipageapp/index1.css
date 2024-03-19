@@ -1,0 +1,10 @@
+.Link{
+  font-family: 'Tahoma';
+  text-decoration: none;/* this will remove underline*/
+  color: black;
+  border-radius: 3px;
+  /* margin: 100px; */
+  padding: 5px;
+  background-color: rgb(7, 182, 167);
+
+  }

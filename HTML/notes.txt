@@ -1,0 +1,105 @@
+api end points
+jwt/0auth for existing code
+links:
+1.https://medium.com/@lucasthedev/lexical-scope-in-javascript-callback-functions-and-the-difference-between-factory-functions-and-78a5f61e5486
+
+
+
+1.import and require:
+ The require() function can be called from anywhere within the program, 
+ whereas import() cannot be called conditionally. It always runs at the 
+ beginning of the file. To include a module with the require() function,
+ that module must be saved
+1.authentication:it is verifying a user's identity.(login-username,password)
+2.authorization:it baically verify's the identity.
+  granting access to a user who is already authenticated.(checks
+  the permission whether the same person is trying to access is authorization).
+3.callback function:A callback is a function that is passed as an argument to another function,
+4.endpoints:
+ api endpoint:-HTTP requests
+ within an API that accepts requests and sends back responses. 
+ types-push,put,Delete,get,post.
+ API endpoint is a specific location within an API that accepts requests and sends back responses
+5.lexical scope:
+ scope refers to the area where a function or variable is 
+ visible and accessible to other code.
+  function parent() {
+  let name = "John";
+
+  function child() {
+    console.log(name);
+  }
+
+  child();
+  }
+  parent(); 
+  In this example, the parent function defines the variable name. It then 
+  declares the child function, which is able to access the name variable 
+  even though it is declared in a different scope. This is because the child 
+  function has access to its lexical scope, which includes the scope of the 
+  parent function. Therefore, when the child function is called, it prints 
+  the value "John" to the console.
+6.Auth0 and jwt:(https://stackoverflow.com/questions/32964774/oauth-or-jwt-which-one-to-use-and-why)
+ Auth0:open authorization:
+      -an authentication framework.
+      - to add authentication and authorization services to your applications.
+      - Auth0 is a third-party authentication and authorization platform that 
+       provides a comprehensive set of tools and services for implementing authentication and 
+       authorization in applications. 
+  jwt: JSON web tokens: 
+      -simple authentication protocol
+      -authentication and exchanging info
+      -JWT is a token format used to securely transmit info btw web applications(client side).
+       (authentication and authorization information)';/
+      -used to identify an authenticated user.
+7.bodyparser:
+when ever we are creating an api they were having some type of req,res.
+when ever we are making any req bodyparser will help us to signify(indicate)(whatever data we are sending)
+it is kind of middleware.
+8.api endpoint:-HTTP requests
+ within an API that accepts requests and sends back responses. 
+ types-push,put,Delete,get,post.
+9.books.push(newBook):
+ adding the another newbook data into existing array.
+10.(index === -1)
+checking whether the book is not found(or) exist or not
+------------------------------------------------------------------------------------------------------------------------
+difference between api code(api.js) and jwt code(app1.js)
+The terms "code first" and "code second" are often used in the context of different approaches to developing applications, especially when it comes to database design and integration. Let's explore the meanings of these terms:
+ 
+Code First:
+ 
+Definition: In a "code-first" approach, the emphasis is on writing application code first, and the database schema is generated based on the 
+ application code.
+-Database Schema Generation: The database tables, relationships, and other schema elements are automatically generated from the models or 
+ classes defined in the application code.
+-ORM (Object-Relational Mapping): Code-first often involves the use of an Object-Relational Mapping (ORM) framework. The ORM framework 
+ translates between the application's object-oriented model and the relational database model.
+-Advantages: Developers can focus on the application's logic without worrying too much about the underlying database structure.
+ It's a convenient approach for rapid development.
+
+CODE SECOND:
+ 
+Definition: In a "code-second" or "database-first" approach, the database schema is designed and created independently of the application code. 
+ The application code is then written to work with the existing database schema.
+-Database Design: Developers design the database schema using tools like SQL scripts, database design tools, or visual designers. The schema 
+ is created before writing application code.
+-ORM (Object-Relational Mapping): If an ORM is used, developers may need to create mappings between the database schema and application code 
+ manually.
+-Advantages: Offers more control over the database structure. Useful in scenarios where the database schema is critical or where 
+there are existing databases that need to be integrated.
+Application to Provided Codes:
+ 
+The first code snippet appears to follow a "code-first" approach. It defines an Express.js application with CRUD (Create, Read, Update, Delete)
+ operations for a collection of books. The database schema is implicit in the code, and no separate database creation steps are shown.
+ 
+The second code snippet also follows a "code-first" approach, but it introduces authentication using JSON Web Tokens (JWT). The authentication 
+middleware (authenticateJWT) is applied to routes that require authentication, and it verifies the JWT token.
+ 
+In summary, the key difference between "code first" and "code second" lies in the order of priority: whether the emphasis is on writing 
+application code first and generating the database schema automatically (code first) or designing the database schema first and writing 
+application code to work with it (code second). Both approaches have their advantages, and the choice often depends on the specific 
+requirements and preferences of the development team has context menu
+
+implement jwt code for existing code without access token 
+and we should not fetch api.

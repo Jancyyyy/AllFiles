@@ -1,0 +1,47 @@
+what are ways to async programming in es5
+
+Static variable: A static variable in JavaScript is basically a 
+property of the class which is not used on the object of the 
+class but is used in the class itself.
+
+Constant: A constant variable in JavaScript is a variable that 
+has a constant or a fixed value which remains the same ie. 
+which does not change throughout the program.
+
+Both of them are used to share the benaviour and data from multiple objects.
+-prototype is used to access the prototype of a function using function.
+-It is a property of the class
+Eg:Syntax: (function.prototype)
+ 
+-proto is used to access the prototype of a function using the object
+-It is the property of the instance of that class.
+-It is also called dunder proto.
+Eg:Syntax: (object.__proto__)
+
+Ajax is used to update the page asynchronously by updating only a
+ particular part of  the webpage instead of reloading the whole page.
+
+In RESTFUL web service HTTP methods like GET, POST, PUT and DELETE 
+can be used to perform CRUD operations.
+
+GET: It requests a resource at the request URL. It should not contain a request 
+  body as it will be discarded. Maybe it can be cached locally or on the server.
+POST: It submits information to the service for processing; it should typically
+  return the modified or new resource
+PUT: At the request URL it update the resource
+DELETE: At the request URL it removes the resource
+ 
+json-it stands for javascript object notation,it is used to store and 
+transfer data in a lightweight format,it is often used to 
+transfer data from server to the webpage
+
+---------------------------------------------------------------------------------------------------------------------
+https://www.javatpoint.com/es5-vs-es6
+
+https://www.google.com/search?sca_esv=587427479&rlz=1C1GCEU_enIN1030IN1030&biw=1366&bih=611&q=definition+of+es5+js&tbm=isch&source=lnms&sa=X&ved=2ahUKEwj5i5WJ9_KCAxXgZmwGHaT1CH0Q0pQJegQICxAB#imgrc=_uh7z8ZYQDsCRM
+
+https://www.google.com/search?sca_esv=587427479&rlz=1C1GCEU_enIN1030IN1030&biw=1366&bih=611&q=definition+of+es5+js&tbm=isch&source=lnms&sa=X&ved=2ahUKEwj5i5WJ9_KCAxXgZmwGHaT1CH0Q0pQJegQICxAB#imgrc=_uh7z8ZYQDsCRM
+
+https://www.programiz.com/javascript/library/object/defineProperty
+
+https://www.geeksforgeeks.org/javascript-object-defineproperties-method/
