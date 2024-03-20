@@ -1,0 +1,100 @@
+input[type="time"]:before{
+    content:attr(placeholder);
+
+}
+
+/* input{
+    background-color: aqua;
+} */input[type="time"]::before {
+
+    content: attr(placeholder);
+
+    position: absolute;
+
+    color: #999999;
+
+  }
+
+ 
+
+  input[type="time"] {
+
+    color: #ffffff;
+
+  }
+
+ 
+
+  input[type="time"]:focus,
+
+  input[type="time"]:valid {
+
+    color: #666666;
+
+  }
+
+ 
+
+  input[type="time"]:focus::before,
+
+  input[type="time"]:valid::before {
+
+    content: "";
+
+  }
+
+  .name__single{
+    padding-right: 33px !important;
+    padding-left: 22px !important;
+  }
+
+  @media screen and (min-width: 540px) and (max-width: 600px) {
+    .date__single{
+        padding-right:143px !important;
+    }
+    .from__time{
+        padding-right:143px !important;
+
+    }
+    .to__time{
+      padding-right:143px !important;
+
+  }
+  .name__single{
+    padding-right: 169px !important;
+  }
+}
+  @media screen and (min-width: 1200px) {
+    .date__single{
+        padding-right:28px !important;
+    }
+    .from__time{
+        padding-right:28px !important;
+
+    }
+    .to__time{
+      padding-right:28px !important;
+
+  }
+  .name__single{
+    padding-right: 63px !important;
+  }
+    
+}
+@media screen and (min-width: 1300px) {
+  .date__single{
+      padding-right:65px !important;
+  }
+  .from__time{
+      padding-right:65px !important;
+
+  }
+  .to__time{
+    padding-right:65px !important;
+
+}
+.name__single{
+  padding-right: 100px !important;
+}
+  
+}

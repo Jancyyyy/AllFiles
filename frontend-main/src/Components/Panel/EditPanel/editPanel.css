@@ -1,0 +1,28 @@
+.select{
+    width: 15rem!important;
+}
+.responsive {
+  margin-left: 10px;
+  max-width: 90%;
+}
+
+@media screen and (min-width: 540px) and (max-width: 600px) {
+    .grade__edit {
+      padding-right: 147px !important;
+    }
+    
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .grade__edit {
+      padding-right: 29px !important;
+    }
+    
+  }
+  
+  @media screen and (min-width: 1300px) {
+    .grade__edit {
+      padding-right: 58px !important;
+    }
+   
+  }

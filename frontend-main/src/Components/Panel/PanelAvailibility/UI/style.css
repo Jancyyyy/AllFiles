@@ -1,0 +1,39 @@
+/* @media screen and (min-width: 280px) and (max-width: 380px) {
+   .buttons{
+    padding-top: 4px !important;
+
+   }
+    
+} */
+
+@media screen and (min-width: 388px) and (max-width: 399px) {
+    .date_panel{
+        padding-right: 23px !important;
+    }
+    .drop__down{
+        padding-right: 23px !important;
+
+    }
+    
+}
+
+@media screen and (min-width: 400px) and (max-width: 500px) {
+    .date_panel{
+        padding-right: 44px !important;
+    }
+    .drop__down{
+        padding-right: 44px !important;
+
+    }
+    
+}
+@media screen and (min-width: 540px) and (max-width: 600px) {
+    .date_panel{
+        padding-right:172px !important;
+    }
+    .drop__down{
+        padding-right:172px !important;
+
+    }
+    
+}

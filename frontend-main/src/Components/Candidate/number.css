@@ -1,0 +1,86 @@
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media screen and (min-width: 540px) and (max-width: 600px) {
+  .can__mail {
+    padding-right: 100px !important;
+  }
+
+  .can__contact {
+    padding-right: 100px !important;
+  }
+
+  .can__experience {
+    padding-right: 100px !important;
+  }
+  .candidate__mail {
+    padding-right: 117px !important;
+  }
+
+  .candidate__contact {
+    padding-right: 117px !important;
+  }
+
+  .candidate__experience {
+    padding-right: 117px !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .can__mail {
+    padding-right: 32px !important;
+  }
+
+  .can__contact {
+    padding-right: 32px !important;
+  }
+
+  .can__experience {
+    padding-right: 32px !important;
+  }
+  .candidate__mail {
+    padding-right: 39px !important;
+  }
+
+  .candidate__contact {
+    padding-right: 39px !important;
+  }
+
+  .candidate__experience {
+    padding-right: 39px !important;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .can__mail {
+    padding-right: 68px !important;
+  }
+
+  .can__contact {
+    padding-right: 68px !important;
+  }
+
+  .can__experience {
+    padding-right: 68px !important;
+  }
+  .candidate__mail {
+    padding-right: 74px !important;
+  }
+
+  .candidate__contact {
+    padding-right: 74px !important;
+  }
+
+  .candidate__experience {
+    padding-right: 74px !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #cancelbutton {
+    margin-top: 4px !important;
+  }
+}

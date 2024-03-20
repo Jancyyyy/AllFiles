@@ -1,0 +1,52 @@
+.select{
+    width: 15rem!important;
+}
+@media screen and (min-width: 390px) and (max-width: 399px) {
+    .grade__panel {
+      padding-right: 20px !important;
+    }
+    .email__panel {
+      padding-right: 20px !important;
+    }
+   
+  }
+
+@media screen and (min-width: 400px) and (max-width: 415px) {
+    .grade__panel {
+      padding-right: 40px !important;
+    }
+    .email__panel {
+      padding-right: 40px !important;
+    }
+   
+  }
+  
+
+@media screen and (min-width: 540px) and (max-width: 600px) {
+    .grade__panel {
+      padding-right: 167px !important;
+    }
+    .email__panel {
+      padding-right: 167px !important;
+    }
+   
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .grade__panel {
+      padding-right: 35px !important;
+    }
+    .email__panel {
+      padding-right: 35px !important;
+    }
+  }
+  
+  @media screen and (min-width: 1300px) {
+    .grade__panel {
+      padding-right: 73px !important;
+    }
+    .email__panel {
+      padding-right: 73px !important;
+    }
+  }
+  

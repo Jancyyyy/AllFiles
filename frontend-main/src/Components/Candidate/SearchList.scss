@@ -1,0 +1,26 @@
+.paginator {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+}
+
+.searchList__lists {
+  width: 100%;
+}
+
+.searchList__lists td {
+  padding: 8px 1px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .searchList__lists th,
+  .searchList__lists td {
+    font-size: 5px;
+    padding: 2px 1px !important;
+  }
+
+  .searchList__lists th {
+    font-size: 5px;
+    width: 10px;
+  }
+}
